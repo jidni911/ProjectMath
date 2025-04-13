@@ -1,0 +1,24 @@
+!==EX-2
+!==WARNING-(MAKE SURE FILE EXTENSION IS ENABLED,IF IT IS DISABLED YOU MAY HAVE FACE DIFFICULTY FOR CREATING ROOT.TXT FILE)
+!==MAKE SURE YOU HAVE A ROOT.TXT FILE ALREADY CREATED WITH INPUTS OF A,B,C
+!==For Creating .txt file (mouse right click==>New==>Text Document)
+!==Make sure named the file what you will give in the file='filename' 
+!==OTHERWISE PROGRAM WILL NOT RUN
+!==A ROOT.TXT FILE MUST HAVE TO CREATE IN THE SAME LOCATION WHERE YOU SAVE THIS FORTRAN FILE
+!==WHAT SHOULD BE IN THE ROOT.TXT FILE? FOR THAT CHECK MY ROOT.TXT FILE
+   PROGRAM ROOTS
+   OPEN(UNIT=3,FILE='ROOT.TXT')
+   PRINT*,"Input the value of A,B,C"
+15 READ(3,*) A,B,C
+   IF(A.EQ.0.0) GOTO 15
+     D=B**2-4.0*A*C
+     P=-B/(2.0*A)
+     Q=SQRT(ABS(D)/(2.0*A))
+     IF(D.GE.0.0)THEN
+       PRINT*," 1ST ROOT = ",P+Q
+       PRINT*," 2ND ROOT = ",P-Q  
+       ELSE
+         PRINT*," 1ST ROOT = ",P,"+I",Q
+         PRINT*," 2ND ROOT = ",P,"-I",Q
+         ENDIF
+         END PROGRAM

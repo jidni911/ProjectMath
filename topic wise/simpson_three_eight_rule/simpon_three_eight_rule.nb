@@ -1,0 +1,142 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      4113,        133]
+NotebookOptionsPosition[      3685,        114]
+NotebookOutlinePosition[      4029,        129]
+CellTagsIndexPosition[      3986,        126]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"##", "Simpson", "  ", 
+  FractionBox["3", "8"], "  ", "rule"}]], "Input",
+ CellChangeTimes->{{3.709814313990309*^9, 3.7098143638837004`*^9}},
+ FontSize->24],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], "=", 
+   FractionBox["1", 
+    RowBox[{"1", "+", "x"}]]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"a", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"b", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"exact", "=", 
+  RowBox[{
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "a", "b"], 
+    RowBox[{
+     RowBox[{"f", "[", "x", "]"}], 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], "//", 
+   "N"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n", "=", "10"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"h", "=", 
+   FractionBox[
+    RowBox[{"b", "-", "a"}], "n"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sum1", "=", 
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{"f", "[", 
+      RowBox[{"a", "+", 
+       RowBox[{"i", "*", "h"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", 
+       RowBox[{"n", "-", "1"}], ",", "1"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sum2", "=", 
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{"f", "[", 
+      RowBox[{"a", "+", 
+       RowBox[{"i", "*", "h"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "3", ",", 
+       RowBox[{"n", "-", "1"}], ",", "3"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sum", "=", 
+   RowBox[{"sum1", "-", "sum2"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"approx", "=", 
+  RowBox[{
+   RowBox[{"(", 
+    FractionBox[
+     RowBox[{"(", 
+      RowBox[{"3", "*", "h"}], ")"}], "8"], ")"}], "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"f", "[", "a", "]"}], "+", 
+     RowBox[{"3", "*", "sum"}], "+", 
+     RowBox[{"2", "*", "sum2"}], "+", 
+     RowBox[{"f", "[", "b", "]"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", 
+  RowBox[{"approx", ",", "9"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"error", "=", 
+  RowBox[{"approx", "-", "exact"}]}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.7098144125453243`*^9, 3.7098148839574375`*^9}, {
+  3.709814941593302*^9, 3.709814952230854*^9}, {3.716165469049528*^9, 
+  3.716165479542982*^9}, {3.71616559915819*^9, 3.716165619471319*^9}}],
+
+Cell[BoxData["0.6931471805599453`"], "Output",
+ CellChangeTimes->{{3.7098149448015757`*^9, 3.7098149533286295`*^9}, {
+  3.7161654723658695`*^9, 3.716165482639558*^9}, {3.716165602311428*^9, 
+  3.7161656249903994`*^9}}],
+
+Cell[BoxData["0.68034733262093943208494292085623354973`9."], "Output",
+ CellChangeTimes->{{3.7098149448015757`*^9, 3.7098149533286295`*^9}, {
+  3.7161654723658695`*^9, 3.716165482639558*^9}, {3.716165602311428*^9, 
+  3.716165624999405*^9}}],
+
+Cell[BoxData[
+ RowBox[{"-", "0.012799847939005904`"}]], "Output",
+ CellChangeTimes->{{3.7098149448015757`*^9, 3.7098149533286295`*^9}, {
+  3.7161654723658695`*^9, 3.716165482639558*^9}, {3.716165602311428*^9, 
+  3.7161656250004063`*^9}}]
+}, Open  ]]
+},
+WindowSize->{703, 504},
+WindowMargins->{{74, Automatic}, {34, Automatic}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 180, 4, 71, "Input"],
+Cell[CellGroupData[{
+Cell[762, 28, 2203, 67, 339, "Input"],
+Cell[2968, 97, 218, 3, 31, "Output"],
+Cell[3189, 102, 240, 3, 31, "Output"],
+Cell[3432, 107, 237, 4, 31, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

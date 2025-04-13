@@ -1,0 +1,294 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9739,        284]
+NotebookOptionsPosition[      8907,        251]
+NotebookOutlinePosition[      9281,        267]
+CellTagsIndexPosition[      9238,        264]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "z_", "]"}], ":=", 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["z", "2"], "+", "5"}], 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"z", "-", "1"}], ")"}], 
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["z", "2"], "+", "5"}], ")"}]}]]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"f", "[", "z", "]"}], "//", 
+  "Simplify"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.9113912862973385`*^9, 3.911391331416195*^9}, {
+   3.91139210083709*^9, 3.9113922261684494`*^9}, 3.9113922987210183`*^9, {
+   3.911393259072654*^9, 3.911393267386828*^9}}],
+
+Cell[BoxData[
+ FractionBox["1", 
+  RowBox[{
+   RowBox[{"-", "1"}], "+", "z"}]]], "Output",
+ CellChangeTimes->{3.911393268289488*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Denominator", "[", 
+     RowBox[{
+      RowBox[{"f", "[", "z", "]"}], "//", "Simplify"}], "]"}], "\[Equal]", 
+    "0"}], ",", "z"}], "]"}]], "Input",
+ CellChangeTimes->{{3.911393438946823*^9, 3.9113934676104617`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"z", "\[Rule]", "1"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.9113934685322733`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Abs", "[", 
+       RowBox[{"x", "+", 
+        RowBox[{"I", " ", "y"}], " ", "-", "2"}], "]"}], "\[Equal]", "2"}], 
+     ",", 
+     RowBox[{
+      RowBox[{"x", "+", 
+       RowBox[{"I", " ", "y"}]}], " ", "\[Equal]", "1"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "10", ",", 
+     RowBox[{"-", "10"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", "10", ",", 
+     RowBox[{"-", "10"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.911393486550144*^9, 3.9113935896416645`*^9}, {
+  3.911393623083699*^9, 3.911393643133418*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[GraphicsComplexBox[CompressedData["
+1:eJxdVQs0lGkYltwZM6bWGs2KSJYwctrOtvJ+VrqfVLospZRVbdZiGUtbNqxL
+oQtK2yplKR3bhY1cmvmYIpd2KWfk0hkx7splRDOazDL//9uz5pw53znzffO+
+z/N87/N8ZocCd/ipqqioRE1/Z9ZCh2U2cUtoyNt36249NwkOfZoUrhFJQ64p
+FhtTLEYxX7NzccpKfaR61Dj7wtG32FKXveCvJH10gb2k+cSBAXzkO9vooBF9
+lBfQVhTQ1oPbMpfqbmXSUYZBGbc2oBv3M3oith2jozXKeh24vWjmIB218lvX
+Zg68xj/vC1f57D4dRV7htF8basZWF3rUF/LpKFNZrwmvvWNXIaqho7DSxgS7
+yUaMeofOZQzTUbxyvwpHTY696pTSUfHhIae92x9hFNr+TCino5q8VXYicT5W
+UX4YiFibnT72uG5iTNLRcrWqVtvEfKDq9RL1wJXsd4foB8tIPPUEHjhO4s0l
+8ALFp57gA70k310EX2gl9bhL6AGH3YU7vUb10WNCLzAj9eQResIjUm8DQm9Q
+U+LWR0xOywoj8RC4Lk9TPxBFQ+7E/cATBmfw9vT9xZn5NHm4ScBq48yGHopl
+He9n14yB0MdefeKEHtJQ1nkHjv5vWgrV9dBo2eaLlqxx+Ec7aKRbpIt0hi9t
+vRU6Dg5MLR3HFbqIp8Q3AVuUfXRRm6mtKmNiAgKeB3+M/V4HFXpubxKsk0Lw
+zLEibTQmNuE0+ssgMSlYVxCjjUKVv8tAP6Y2cXWdFvK7XOKjWTYJTSqijsXW
+mshaiVMOzTn3fPhSDeRXsjp84JkcSpV9NVBuZIY26pPD6eVmTi6pGiipTsM4
+a8lHEBWP54y8VUMdpSeDrH+YgvlKXmrojFvJg1bZFORc01kqz1JFbQf3v2Kf
+U4Cpq7nD5M+qSCLYLNh5RUHymYeYdbQztEEFBG962WH14b+VbRWeUNg1BTfd
+fO2KJxRA4eTeHbYKa1CA4cqHZ5wFMkDeAXyPQwpYuuPsuvvZMkixdXuQuFcB
+lG6syluhWrlT8NPLTK+kvNHZOsEql6Uhm0dBq82Ee8RfDtQ9WgabR/bslkOX
+Obs6OGkEcOvpP6wmP0Ck4dXkHO4g/B3q8KWt2yS4trh/yJL1A6XvDQVLJ8yu
+D2JTPl27hyYDaq6ir+35/HKkFKzTPXgPDLtB2zPTsZb3HozHar8VI/EsTmpO
+7Rx6EoWV41AuYqlVdIkg6nmi2KjlHfzOaXzfZvEKqPmhfBDb6zelvkoCWdH3
+PNOYQjBODrxefWkUWguu+LRJGmd5Zcg1R2zKGqB2nlzzWNYw1C3YYhOTXg+3
+f7wbtbViCNjmkkU2E7XAUerzBuKZLfzG9BrQep2SZS8eBMqXwa8TesPcB2Bb
+1nqj0r7yWZ76dpxyhUkJ0I4K+ckPxSBNT35qigtmeWXv9xYa8XIgkRX/nJHa
+Alqdnt2C49dneZyiN/NLijJg+M1bY1WGEE7xb0ujvU/N9qVyY1d0S6nXRbM1
+PueiTTU4Z50E4yd7Ib7XidgvL6HOUfvU+r//f2LKo+pT+cUg+1cR/fGTDgIf
+lX+S2D+/tniRDW5THCjgtuDmTYGy8+V3YNVXi0KYF0S4geRL5WvCb8zUG9Ji
+iDOO+NXzkRhH2fOjuc5lYPbNCZlPUhe2I/Wj8priGUDoi19ESFwqrtSASdwz
+l9DOQZwLgZXn1zdACC2V9YViCPPI+6Xeh7LiKl/2AiEk4P6rNy+NYkpX/kkn
+vXPWEhzNyBoK2SeGfGLe8AHDuAje9Dz6suKElbz3mLrH9jVq27lcKQ4k572a
+mHc8z4LwQwPhB0zNFX2hc4zBbjk+RvppPuEn7E36zYTwG6bm3IjwI3Yk/ZpG
++BVTPnLt1rM46KPANNLfToS/8Rz/4w2JXuPnRQpwIlZM5Ul+Pce0b0CBHV1e
+GtSmqSJ+lVil8KgCz8knvMuyafjFgBp6fNFZbfjIFJ6Td7iDzEcKP5PMzwNE
+fmIqbwU6Hst/2S/DQWQe3yPyGLMF1w+mWOoiSm97iw0rO6fzvdx8fXNm6Dim
+3odj1f4FvnljeO77/y+2Cfpt
+   "], {{}, {}, 
+    TagBox[
+     TooltipBox[
+      {RGBColor[0.368417, 0.506779, 0.709798], AbsoluteThickness[1.6], 
+       LineBox[{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+         19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 
+        36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 
+        53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 
+        70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 
+        87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 
+        103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 
+        117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129}]},
+      RowBox[{
+        RowBox[{"Abs", "[", 
+          RowBox[{
+            RowBox[{"-", "2"}], "+", "x", "+", 
+            RowBox[{"\[ImaginaryI]", " ", "y"}]}], "]"}], "\[Equal]", "2"}]],
+     Annotation[#, Abs[-2 + $CellContext`x + Complex[0, 1] $CellContext`y] == 
+      2, "Tooltip"]& ]}],
+  AspectRatio->1,
+  DisplayFunction->Identity,
+  Frame->True,
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{"DefaultBoundaryStyle" -> Automatic},
+  PlotRange->{{-10, 10}, {-10, 10}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.02]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.9113935904696712`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"c", "=", "2"}], "\n", 
+ RowBox[{"path", "=", 
+  RowBox[{"Circle", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"2", ",", "0"}], "}"}], ",", "2"}], "]"}]}], "\n", 
+ RowBox[{"result", "=", 
+  RowBox[{
+   RowBox[{"(", 
+    FractionBox["1", 
+     RowBox[{"2", " ", "Pi", " ", "I"}]], ")"}], " ", 
+   RowBox[{"Integrate", "[", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"f", "[", "z", "]"}], 
+      RowBox[{"z", "-", "c"}]], ",", 
+     RowBox[{"{", 
+      RowBox[{"z", ",", "path"}], "}"}]}], "]"}]}]}]}], "Input",
+ CellChangeTimes->{{3.91139136840974*^9, 3.9113913770982347`*^9}, 
+   3.911391706463287*^9, {3.911392311803174*^9, 3.911392360380724*^9}}],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{
+  3.911391711971181*^9, {3.9113923027180033`*^9, 3.911392313453484*^9}, 
+   3.911392368692864*^9}],
+
+Cell[BoxData[
+ RowBox[{"Circle", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"2", ",", "0"}], "}"}], ",", "2"}], "]"}]], "Output",
+ CellChangeTimes->{
+  3.911391711971181*^9, {3.9113923027180033`*^9, 3.911392313453484*^9}, 
+   3.9113923686953645`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Integrate", "::", "ilim"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Invalid integration variable or limit(s) in \
+\[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"z\\\", \\\",\\\", \
+RowBox[{\\\"Circle\\\", \\\"[\\\", RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"2\\\
+\", \\\",\\\", \\\"0\\\"}], \\\"}\\\"}], \\\",\\\", \\\"2\\\"}], \
+\\\"]\\\"}]}], \\\"}\\\"}]\\)\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Integrate/ilim\\\", ButtonNote -> \
+\\\"Integrate::ilim\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.9113923687254257`*^9}],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{"\[ImaginaryI]", " ", 
+    RowBox[{"Integrate", "[", 
+     RowBox[{
+      FractionBox["1", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "2"}], "+", "z"}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", "z"}], ")"}]}]], ",", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", 
+        RowBox[{"Circle", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"2", ",", "0"}], "}"}], ",", "2"}], "]"}]}], "}"}]}], 
+     "]"}]}], 
+   RowBox[{"2", " ", "\[Pi]"}]]}]], "Output",
+ CellChangeTimes->{
+  3.911391711971181*^9, {3.9113923027180033`*^9, 3.911392313453484*^9}, 
+   3.9113923687254257`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Exit", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.9113913389995503`*^9, 3.911391340510662*^9}}]
+},
+WindowSize->{1536, 773},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>1.6 Inherited,
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 637, 19, 154, "Input"],
+Cell[1220, 43, 132, 4, 75, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1389, 52, 291, 8, 47, "Input"],
+Cell[1683, 62, 147, 4, 47, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1867, 71, 665, 20, 47, "Input"],
+Cell[2535, 93, 3683, 71, 590, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6255, 169, 680, 20, 143, "Input"],
+Cell[6938, 191, 147, 3, 47, "Output"],
+Cell[7088, 196, 253, 7, 47, "Output"],
+Cell[7344, 205, 690, 13, 37, "Message"],
+Cell[8037, 220, 731, 24, 98, "Output"]
+}, Open  ]],
+Cell[8783, 247, 120, 2, 47, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

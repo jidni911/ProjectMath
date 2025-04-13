@@ -1,0 +1,327 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10293,        319]
+NotebookOptionsPosition[      9607,        291]
+NotebookOutlinePosition[      9981,        307]
+CellTagsIndexPosition[      9938,        304]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"Integrate", " ", 
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "4", "5.2"], 
+    RowBox[{
+     RowBox[{"Log", "[", "x", "]"}], 
+     RowBox[{"\[DifferentialD]", "x"}], " ", "using", " ", "trapezoidal", " ",
+      "rule", " ", "and", " ", "compare", " ", "with", " ", "the", " ", 
+     "exact", " ", "result"}]}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.9014246164008956`*^9, 3.9014247044111767`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], "=", 
+   RowBox[{"Log", "[", "x", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"a", "=", "4"}], ";", 
+  RowBox[{"b", "=", "5.2"}], ";", 
+  RowBox[{"n", "=", "42"}], ";", 
+  RowBox[{"h", "=", 
+   FractionBox[
+    RowBox[{"b", "-", "a"}], "n"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"trap", " ", "=", " ", 
+   RowBox[{
+    FractionBox["h", "2"], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"f", "[", "a", "]"}], "+", 
+      RowBox[{"2", "*", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"i", "=", "1"}], 
+         RowBox[{"n", "-", "1"}]], 
+        RowBox[{"f", "[", 
+         RowBox[{"a", "+", 
+          RowBox[{"i", "*", "h"}]}], "]"}]}]}], "+", 
+      RowBox[{"f", "[", "b", "]"}]}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{
+  "\"\<Calculated result = \>\"", ",", "trap", ",", "\"\< and error = \>\"", 
+   ",", " ", 
+   RowBox[{
+    RowBox[{
+     SubsuperscriptBox["\[Integral]", "4", "5.2"], 
+     RowBox[{
+      RowBox[{"Log", "[", "x", "]"}], 
+      RowBox[{"\[DifferentialD]", "x"}]}]}], " ", "-", " ", "trap"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.90142490800467*^9, 3.901425086774875*^9}, {
+  3.901425142718*^9, 3.901425340519809*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Calculated result = \"\>", "\[InvisibleSpace]", 
+   "1.827843483943799`", "\[InvisibleSpace]", "\<\" and error = \"\>", 
+   "\[InvisibleSpace]", "3.924630937346407`*^-6"}],
+  SequenceForm[
+  "Calculated result = ", 1.827843483943799, " and error = ", 
+   3.924630937346407*^-6],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.9014253157910194`*^9, 3.9014253412056503`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"Integrate", " ", 
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "0", 
+     FractionBox["\[Pi]", "4"]], 
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{"1", "+", 
+       SuperscriptBox["x", "2"]}]], 
+     RowBox[{"\[DifferentialD]", "x"}], " ", "using", " ", 
+     RowBox[{"simpson", "'"}], "s", " ", 
+     RowBox[{"1", "/", "3"}], " ", "rule", " ", "and", " ", "compare", " ", 
+     "with", " ", "the", " ", "exact", " ", "result"}]}]}], " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.9014254568184986`*^9, 3.9014255361119204`*^9}, {
+  3.9014272954492593`*^9, 3.9014272975259056`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], "=", 
+   FractionBox["1", 
+    RowBox[{"1", "+", 
+     SuperscriptBox["x", "2"]}]]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"a", "=", "0"}], ";", 
+  RowBox[{"b", "=", 
+   FractionBox["\[Pi]", "4"]}], ";", 
+  RowBox[{"n", "=", "42"}], ";", 
+  RowBox[{"h", "=", 
+   FractionBox[
+    RowBox[{"b", "-", "a"}], "n"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"simp13", " ", "=", " ", 
+   RowBox[{
+    FractionBox["h", "3"], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"f", "[", "a", "]"}], "+", 
+      RowBox[{"2", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"i", "=", "1"}], 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"n", "-", "1"}], ")"}], "/", "2"}]], 
+        RowBox[{"f", "[", 
+         RowBox[{"a", "+", 
+          RowBox[{"2", " ", "i", " ", "h"}]}], "]"}]}]}], "+", 
+      RowBox[{"4", " ", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"i", "=", "1"}], 
+         FractionBox[
+          RowBox[{"n", "+", "1"}], "2"]], 
+        RowBox[{"f", "[", 
+         RowBox[{"a", "+", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", "i"}], "-", "1"}], ")"}], "h"}]}], "]"}]}]}], "+", 
+      RowBox[{"f", "[", "b", "]"}]}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Calculated result = \>\"", ",", 
+   RowBox[{"simp13", "//", "N"}], ",", "\"\< and error = \>\"", ",", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      SubsuperscriptBox["\[Integral]", "0", 
+       FractionBox["\[Pi]", "4"]], 
+      RowBox[{
+       FractionBox["1", 
+        RowBox[{"1", "+", 
+         SuperscriptBox["x", "2"]}]], 
+       RowBox[{"\[DifferentialD]", "x"}]}]}], "  ", "-", " ", "simp13"}], "//",
+     "N"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.9014255460904007`*^9, 3.901425625890813*^9}, {
+  3.9014270242808847`*^9, 3.901427222152547*^9}, {3.901427258949624*^9, 
+  3.901427301670975*^9}, {3.9014273353212385`*^9, 3.901427359375345*^9}, {
+  3.9014278204945073`*^9, 3.9014278499168453`*^9}, {3.901428108568251*^9, 
+  3.9014281094854255`*^9}, {3.901428173426824*^9, 3.9014281838110113`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Calculated result = \"\>", "\[InvisibleSpace]", 
+   "0.6657737507456752`", "\[InvisibleSpace]", "\<\" and error = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "7.17321424481554`*^-10"}]}],
+  SequenceForm[
+  "Calculated result = ", 0.6657737507456752, 
+   " and error = ", -7.17321424481554*^-10],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.9014273075849524`*^9, 3.9014273601361675`*^9}, {
+   3.90142782209507*^9, 3.901427850755618*^9}, 3.901427924683257*^9, 
+   3.9014281105170865`*^9, {3.901428175482233*^9, 3.9014281844802456`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Find", " ", "the", " ", "value", " ", 
+    RowBox[{
+     SubsuperscriptBox["\[Integral]", "0", "1"], 
+     RowBox[{
+      FractionBox[
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "+", 
+         SuperscriptBox["x", "2"]}], "]"}], 
+       RowBox[{"1", "+", 
+        SuperscriptBox["x", "2"]}]], 
+      RowBox[{"\[DifferentialD]", "x"}], " ", "of", " ", "using", " ", 
+      RowBox[{"Simpson", "'"}], "s", " ", 
+      RowBox[{"3", "/", "8"}], "th", " ", "rule"}]}]}], "*)"}], 
+  " "}]], "Input",
+ CellChangeTimes->{{3.9014283364158745`*^9, 3.901428407713698*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], "=", 
+   FractionBox[
+    RowBox[{"Log", "[", 
+     RowBox[{"1", "+", 
+      SuperscriptBox["x", "2"]}], "]"}], 
+    RowBox[{"1", "+", 
+     SuperscriptBox["x", "2"]}]]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"a", "=", "0"}], ";", 
+  RowBox[{"b", "=", "1"}], ";", 
+  RowBox[{"n", "=", "42"}], ";", 
+  RowBox[{"h", "=", 
+   FractionBox[
+    RowBox[{"b", "-", "a"}], "n"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"var", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"f", "[", "a", "]"}], "+", 
+    RowBox[{"f", "[", "b", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "1"}], ",", 
+    RowBox[{"i", "<", "n"}], " ", ",", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"var", "=", 
+     RowBox[{"var", "+", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Mod", "[", 
+          RowBox[{"i", ",", "3"}], "]"}], "\[Equal]", "0"}], ",", 
+        RowBox[{"2", "*", 
+         RowBox[{"f", "[", 
+          RowBox[{"a", "+", 
+           RowBox[{"i", " ", "h"}]}], "]"}]}], ",", 
+        RowBox[{"3", "*", 
+         RowBox[{"f", "[", 
+          RowBox[{"a", "+", 
+           RowBox[{"i", " ", "h"}]}], "]"}]}]}], "]"}]}]}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"simp38", " ", "=", " ", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"3", "*", "h"}], "8"], 
+    RowBox[{"(", "var", ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Calculated result = \>\"", ",", 
+   RowBox[{"simp38", "//", "N"}], ",", "\"\< and error = \>\"", ",", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      SubsuperscriptBox["\[Integral]", "0", "1"], 
+      RowBox[{
+       FractionBox[
+        RowBox[{"Log", "[", 
+         RowBox[{"1", "+", 
+          SuperscriptBox["x", "2"]}], "]"}], 
+        RowBox[{"1", "+", 
+         SuperscriptBox["x", "2"]}]], 
+       RowBox[{"\[DifferentialD]", "x"}]}]}], "  ", "-", " ", "simp38"}], "//",
+     "N"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.9014284146237383`*^9, 3.9014285113870487`*^9}, {
+  3.9014285707858105`*^9, 3.901428810398861*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Calculated result = \"\>", "\[InvisibleSpace]", 
+   "0.17282745500256771`", "\[InvisibleSpace]", "\<\" and error = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "4.02798572274321`*^-9"}]}],
+  SequenceForm[
+  "Calculated result = ", 0.17282745500256771`, 
+   " and error = ", -4.02798572274321*^-9],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.9014287966838183`*^9, 3.901428812755514*^9}}]
+}, Open  ]]
+},
+WindowSize->{775, 649},
+WindowMargins->{{Automatic, 269}, {17, Automatic}},
+Magnification:>2.1 Inherited,
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 447, 10, 190, "Input"],
+Cell[CellGroupData[{
+Cell[1030, 34, 1318, 40, 456, "Input"],
+Cell[2351, 76, 427, 9, 83, "Print"]
+}, Open  ]],
+Cell[2793, 88, 633, 16, 211, "Input"],
+Cell[CellGroupData[{
+Cell[3451, 108, 2224, 63, 709, "Input"],
+Cell[5678, 173, 596, 12, 84, "Print"]
+}, Open  ]],
+Cell[6289, 188, 618, 17, 176, "Input"],
+Cell[CellGroupData[{
+Cell[6932, 209, 2208, 67, 717, "Input"],
+Cell[9143, 278, 448, 10, 83, "Print"]
+}, Open  ]]
+}
+]
+*)
+

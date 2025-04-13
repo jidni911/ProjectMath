@@ -1,0 +1,210 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6363,        201]
+NotebookOptionsPosition[      5939,        181]
+NotebookOutlinePosition[      6281,        196]
+CellTagsIndexPosition[      6238,        193]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], ":=", 
+   FractionBox["1", 
+    RowBox[{"1", "+", 
+     SuperscriptBox["x", "2"]}]]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"a", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"b", "=", 
+   RowBox[{"\[Pi]", "/", "4"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ex", "=", 
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "a", "b"], 
+    RowBox[{
+     RowBox[{"f", "[", "x", "]"}], 
+     RowBox[{"\[DifferentialD]", "x"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n", "=", "42"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"h", "=", 
+   FractionBox[
+    RowBox[{"b", "-", "a"}], "n"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sum1", "=", " ", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sum2", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sum3", " ", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"sum1", "=", 
+    RowBox[{
+     RowBox[{"f", "[", "a", "]"}], "+", 
+     RowBox[{"f", "[", "b", "]"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "1"}], ",", 
+    RowBox[{"i", "\[LessEqual]", 
+     RowBox[{"n", "-", "1"}]}], ",", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Mod", "[", 
+        RowBox[{"i", ",", "2"}], "]"}], "\[Equal]", "0"}], ",", 
+      RowBox[{"sum2", "=", 
+       RowBox[{"sum2", "+", 
+        RowBox[{"f", "[", 
+         RowBox[{"a", "+", 
+          RowBox[{"i", "*", "h"}]}], "]"}]}]}], ",", 
+      RowBox[{"sum3", "=", 
+       RowBox[{"sum3", "+", 
+        RowBox[{"f", "[", 
+         RowBox[{"a", "+", 
+          RowBox[{"i", "*", "h"}]}], "]"}]}]}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"re13", "=", 
+   RowBox[{"h", "*", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"sum1", "+", 
+       RowBox[{"2", "*", "sum2"}], "+", 
+       RowBox[{"4", "*", "sum3"}]}], ")"}], "/", "3"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<Result from Simpson's 13 = \>\"", " ", ",", " ", 
+    RowBox[{"PaddedForm", "[", 
+     RowBox[{
+      RowBox[{"re13", "//", "N"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"15", ",", "14"}], "}"}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<Result from exact = \>\"", " ", ",", " ", 
+    RowBox[{"PaddedForm", "[", 
+     RowBox[{
+      RowBox[{"ex", "//", "N"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"15", ",", "14"}], "}"}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<Error = \>\"", " ", ",", " ", 
+    RowBox[{"PaddedForm", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Abs", "[", 
+        RowBox[{"ex", "-", "re13"}], "]"}], "//", "N"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"15", ",", "14"}], "}"}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.901150084895822*^9, 3.9011501255806932`*^9}, {
+  3.901150297898596*^9, 3.9011503466798816`*^9}, {3.9011504461612563`*^9, 
+  3.901150706042113*^9}, {3.9011511768041396`*^9, 3.9011511778025417`*^9}, {
+  3.901151350383645*^9, 3.9011513730504847`*^9}, {3.9011514886310873`*^9, 
+  3.9011515466319895`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Result from Simpson's 13 = \"\>", "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\" 0.66577375074568\"\>",
+     0.6657737507456752,
+     AutoDelete->True],
+    PaddedForm[#, {15, 14}]& ]}],
+  SequenceForm["Result from Simpson's 13 = ", 
+   PaddedForm[0.6657737507456752, {15, 14}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.901150673734456*^9, 3.9011507103789206`*^9}, 
+   3.9011511795497446`*^9, 3.901151229249432*^9, 3.901151376654091*^9, 
+   3.9011514578054333`*^9, {3.9011514893798885`*^9, 3.901151504418315*^9}, 
+   3.901151550251196*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Result from exact = \"\>", "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\" 0.66577375002835\"\>",
+     0.6657737500283538,
+     AutoDelete->True],
+    PaddedForm[#, {15, 14}]& ]}],
+  SequenceForm["Result from exact = ", 
+   PaddedForm[0.6657737500283538, {15, 14}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.901150673734456*^9, 3.9011507103789206`*^9}, 
+   3.9011511795497446`*^9, 3.901151229249432*^9, 3.901151376654091*^9, 
+   3.9011514578054333`*^9, {3.9011514893798885`*^9, 3.901151504418315*^9}, 
+   3.901151550251196*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Error = \"\>", "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox[
+     RowBox[{"\<\" 7.17321424481554\"\>", "\[Times]", 
+      SuperscriptBox["10", "\<\"-10\"\>"]}],
+     7.17321424481554*^-10,
+     AutoDelete->True],
+    PaddedForm[#, {15, 14}]& ]}],
+  SequenceForm["Error = ", 
+   PaddedForm[7.17321424481554*^-10, {15, 14}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.901150673734456*^9, 3.9011507103789206`*^9}, 
+   3.9011511795497446`*^9, 3.901151229249432*^9, 3.901151376654091*^9, 
+   3.9011514578054333`*^9, {3.9011514893798885`*^9, 3.901151504418315*^9}, 
+   3.9011515502823963`*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{783, 566},
+WindowMargins->{{283, Automatic}, {Automatic, 52}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3430, 103, 424, "Input"],
+Cell[CellGroupData[{
+Cell[4035, 129, 614, 14, 23, "Print"],
+Cell[4652, 145, 600, 14, 23, "Print"],
+Cell[5255, 161, 656, 16, 23, "Print"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

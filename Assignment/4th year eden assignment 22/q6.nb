@@ -1,0 +1,97 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2489,         87]
+NotebookOptionsPosition[      2109,         69]
+NotebookOutlinePosition[      2483,         85]
+CellTagsIndexPosition[      2440,         82]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"a", "=", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", 
+     RowBox[{"-", "1"}], ",", "1"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"b", "=", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", 
+     RowBox[{"-", "3"}], ",", 
+     RowBox[{"-", "1"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"c", "=", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", 
+     RowBox[{"-", "4"}], ",", 
+     RowBox[{"-", "4"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"a", ".", "b"}], ",", 
+   RowBox[{"b", ".", "c"}], ",", 
+   RowBox[{"c", ".", "a"}]}], "}"}]}], "Input",
+ CellChangeTimes->{{3.911397333785985*^9, 3.911397411982367*^9}, {
+  3.9113976707041287`*^9, 3.9113977672128544`*^9}, {3.9113978122187653`*^9, 
+  3.911397830330154*^9}, {3.911397908792346*^9, 3.9113979514844418`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"4", ",", "19", ",", "6"}], "}"}]], "Output",
+ CellChangeTimes->{3.9113974137791967`*^9, 3.911397718505349*^9, 
+  3.911397831173884*^9, 3.911397953109394*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+   "Hence", " ", "none", " ", "of", " ", "the", " ", "vectors", " ", "are", 
+    " ", "perpendicular"}], ",", " ", 
+   RowBox[{
+    RowBox[{
+    "thus", " ", "they", " ", "dont", " ", "form", " ", "the", " ", "sides", 
+     " ", "of", " ", "a", " ", "right"}], "-", 
+    RowBox[{"angled", " ", "triangle"}]}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.9113979567038207`*^9, 3.911398015350666*^9}}]
+},
+WindowSize->{1536, 773},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>1.9 Inherited,
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 860, 25, 169, "Input"],
+Cell[1443, 49, 197, 4, 57, "Output"]
+}, Open  ]],
+Cell[1655, 56, 450, 11, 95, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

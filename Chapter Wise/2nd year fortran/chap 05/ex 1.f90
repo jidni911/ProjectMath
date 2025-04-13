@@ -1,0 +1,19 @@
+PROGRAM BISECTON
+    F(X)=EXP(-X)-X
+    TOL=0.0001
+    PRINT*,"Enter X0 and XN"
+10  READ(5,*)X0,XN
+20  IF(F(X0)*F(XN).LT.0)THEN
+      C=(X0+XN)/2.0
+    ELSE
+      WRITE(6,*)"CHANGE FOR ANOTHER X0 AND X1"
+      GOTO 10
+    END IF
+    IF(F(X0)*F(C).LT.0)THEN
+        XN=C
+    ELSE
+        X0=C
+    END IF
+    IF(ABS(XN-X0).GT.TOL)GOTO 20
+    WRITE(*,*)"THE ROOT IS=",C
+END PROGRAM

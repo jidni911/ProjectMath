@@ -1,0 +1,164 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4684,        154]
+NotebookOptionsPosition[      4023,        125]
+NotebookOutlinePosition[      4394,        141]
+CellTagsIndexPosition[      4351,        138]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"r", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Cos", "[", 
+      RowBox[{"4", "t"}], "]"}], ",", 
+     RowBox[{"Sin", "[", "t", "]"}], ",", 
+     RowBox[{"6", "t"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vel", "=", 
+   RowBox[{"D", "[", 
+    RowBox[{"r", ",", "t"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"acc", "=", 
+   RowBox[{"D", "[", 
+    RowBox[{"vel", ",", "t"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Velocity at t=0 is \>\"", ",", 
+   RowBox[{"vel", "/.", 
+    RowBox[{"t", "\[Rule]", "0"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.8881961094604254`*^9, 3.8881961495368958`*^9}, {
+  3.8881961838725567`*^9, 3.8881962812947273`*^9}, {3.888196409168152*^9, 
+  3.888196517681943*^9}, {3.8881965888180676`*^9, 3.8881966754138193`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Velocity at t=0 is \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "1", ",", "6"}], "}"}]}],
+  SequenceForm["Velocity at t=0 is ", {0, 1, 6}],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.888196269126706*^9, 3.8881962829171305`*^9}, {
+   3.888196345956841*^9, 3.8881963603244667`*^9}, 3.888196637583753*^9, 
+   3.8881966770206223`*^9, 3.888196893221402*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<accelaration at t=0 is \>\"", ",", 
+   RowBox[{"acc", "/.", 
+    RowBox[{"t", "\[Rule]", "0"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.88819665856579*^9, 3.888196703509469*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"accelaration at t=0 is \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "16"}], ",", "0", ",", "0"}], "}"}]}],
+  SequenceForm["accelaration at t=0 is ", {-16, 0, 0}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8881967077370763`*^9, 3.8881968515849295`*^9, 
+  3.88819689758941*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Velocity at t= \[Pi]/2 is \>\"", ",", 
+   RowBox[{"vel", "/.", 
+    RowBox[{"t", "\[Rule]", 
+     FractionBox["\[Pi]", "2"]}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.888196750886752*^9, 3.8881967768295975`*^9}, {
+  3.8881968164848676`*^9, 3.888196831195693*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Velocity at t= \[Pi]/2 is \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0", ",", "6"}], "}"}]}],
+  SequenceForm["Velocity at t= \[Pi]/2 is ", {0, 0, 6}],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.8881967805268044`*^9, 3.888196817483269*^9, 3.8881968479033227`*^9, {
+   3.888196900584615*^9, 3.8881969155450416`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<accelaration at t=\[Pi]/2 is \>\"", ",", 
+   RowBox[{"vel", "/.", 
+    RowBox[{"t", "\[Rule]", 
+     FractionBox["\[Pi]", "2"]}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.888196798388836*^9, 3.8881968047068467`*^9}, {
+  3.8881968370145035`*^9, 3.8881968426929135`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"accelaration at t=\[Pi]/2 is \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0", ",", "6"}], "}"}]}],
+  SequenceForm["accelaration at t=\[Pi]/2 is ", {0, 0, 6}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.888196806017249*^9, 3.8881968435977154`*^9, 
+  3.8881969301466675`*^9}]
+}, Open  ]]
+},
+WindowSize->{1024, 686},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>2. Inherited,
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 875, 23, 175, "Input"],
+Cell[1458, 47, 433, 9, 43, "Print"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1928, 61, 234, 5, 60, "Input"],
+Cell[2165, 68, 365, 9, 43, "Print"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2567, 82, 319, 7, 85, "Input"],
+Cell[2889, 91, 400, 9, 43, "Print"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3326, 105, 324, 7, 85, "Input"],
+Cell[3653, 114, 354, 8, 43, "Print"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

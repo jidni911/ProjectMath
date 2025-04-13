@@ -1,0 +1,129 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3078,        119]
+NotebookOptionsPosition[      2524,         94]
+NotebookOutlinePosition[      2895,        110]
+CellTagsIndexPosition[      2852,        107]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"u", "=", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "3", ",", "4"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"v", "=", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "0", ",", "0"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"w", "=", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "1", ",", "0"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"p", "=", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0", ",", "1"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"angle1", "=", 
+  RowBox[{
+   RowBox[{"ArcCos", "[", 
+    FractionBox[
+     RowBox[{"u", ".", "v"}], 
+     RowBox[{
+      SqrtBox[
+       RowBox[{"u", ".", "u"}]], 
+      SqrtBox[
+       RowBox[{"v", ".", "v"}]]}]], "]"}], "//", "N"}]}]}], "Input",
+ CellChangeTimes->{{3.8855207219672194`*^9, 3.8855208764802904`*^9}}],
+
+Cell[BoxData["1.1902899496825317`"], "Output",
+ CellChangeTimes->{3.8855208710514812`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"angle2", "=", 
+  RowBox[{
+   RowBox[{"ArcCos", "[", 
+    FractionBox[
+     RowBox[{"u", ".", "w"}], 
+     RowBox[{
+      SqrtBox[
+       RowBox[{"u", ".", "u"}]], 
+      SqrtBox[
+       RowBox[{"w", ".", "w"}]]}]], "]"}], "//", "N"}]}]], "Input",
+ CellChangeTimes->{{3.885520758232083*^9, 3.885520759495685*^9}, {
+  3.885520882470701*^9, 3.885520916509961*^9}}],
+
+Cell[BoxData["0.9799235766494775`"], "Output",
+ CellChangeTimes->{3.8855209207687683`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"angle3", "=", 
+  RowBox[{
+   RowBox[{"ArcCos", "[", 
+    FractionBox[
+     RowBox[{"u", ".", "p"}], 
+     RowBox[{
+      SqrtBox[
+       RowBox[{"u", ".", "u"}]], 
+      SqrtBox[
+       RowBox[{"p", ".", "p"}]]}]], "]"}], "//", "N"}]}]], "Input",
+ CellChangeTimes->{{3.8855209292239833`*^9, 3.8855209513760223`*^9}}],
+
+Cell[BoxData["0.7335813236400831`"], "Output",
+ CellChangeTimes->{3.8855209540904264`*^9}]
+}, Open  ]]
+},
+WindowSize->{767, 586},
+WindowMargins->{{Automatic, -61}, {12, Automatic}},
+Magnification:>2. Inherited,
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 850, 27, 251, "Input"],
+Cell[1433, 51, 90, 1, 59, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1560, 57, 385, 12, 97, "Input"],
+Cell[1948, 71, 90, 1, 59, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2075, 77, 340, 11, 98, "Input"],
+Cell[2418, 90, 90, 1, 59, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

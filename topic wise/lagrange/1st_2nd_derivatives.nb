@@ -1,0 +1,136 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3717,        126]
+NotebookOptionsPosition[      3288,        107]
+NotebookOutlinePosition[      3631,        122]
+CellTagsIndexPosition[      3588,        119]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ StyleBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"Evaluate", " ", "the", " ", "1", "st"}], " ", "&"}], " ", "2", 
+     "nd", " ", "derivative", " ", "of", " ", 
+     SqrtBox["x"], "at", " ", "x"}], "=", "15"}], " "}],
+  FontSize->18,
+  FontSlant->"Italic",
+  FontColor->GrayLevel[0.5],
+  Background->RGBColor[0.87, 0.94, 1]], "\[IndentingNewLine]", 
+ StyleBox[
+  RowBox[{"x", "    ", "=", "                ", 
+   RowBox[{
+   "15", "           ", "17", "          ", " ", "19", "     ", "  ", "  ", "  ",
+     "21", "             ", "23"}]}],
+  FontSize->18,
+  FontSlant->"Italic",
+  FontColor->GrayLevel[0.5],
+  Background->RGBColor[0.87, 0.94, 1]], "\[IndentingNewLine]", 
+ RowBox[{
+  StyleBox[
+   RowBox[{"y", "=", 
+    RowBox[{
+     SqrtBox[
+      RowBox[{"x", " "}]], "      ", "3.873", "     ", "4.123", "     ", 
+     "4.354", "    ", "4.583", "      ", "4.796"}]}],
+   FontSize->18,
+   FontSlant->"Italic",
+   FontColor->GrayLevel[0.5],
+   Background->RGBColor[0.87, 0.94, 1]], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.7159599050678296`*^9, 3.7159599092350683`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"data", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"15", ",", "3.873"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"17", ",", "4.123"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"19", ",", "4.354"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"21", ",", "4.583"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"23", ",", "4.796"}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"poly", "=", 
+   RowBox[{"InterpolatingPolynomial", "[", 
+    RowBox[{"data", ",", "x"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"f", "[", "x_", "]"}], "=", 
+  RowBox[{"poly", "//", "Simplify"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"f", "'"}], "[", "15", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"f", "''"}], "[", "15", "]"}]}], "Input",
+ CellChangeTimes->{{3.715959742155512*^9, 3.7159598550139666`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "8.537351562500191`"}], "+", 
+  RowBox[{"2.3608333333333746`", " ", "x"}], "-", 
+  RowBox[{"0.1765677083333366`", " ", 
+   SuperscriptBox["x", "2"]}], "+", 
+  RowBox[{"0.006166666666666783`", " ", 
+   SuperscriptBox["x", "3"]}], "-", 
+  RowBox[{"0.00008072916666666817`", " ", 
+   SuperscriptBox["x", "4"]}]}]], "Output",
+ CellChangeTimes->{3.715959858414161*^9}],
+
+Cell[BoxData["0.13645833333333535`"], "Output",
+ CellChangeTimes->{3.715959858415161*^9}],
+
+Cell[BoxData[
+ RowBox[{"-", "0.016104166666666753`"}]], "Output",
+ CellChangeTimes->{3.7159598584161615`*^9}]
+}, Open  ]]
+},
+WindowSize->{1344, 633},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Microsoft Windows (32-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 1157, 34, 136, "Input"],
+Cell[CellGroupData[{
+Cell[1739, 58, 924, 27, 112, "Input"],
+Cell[2666, 87, 402, 10, 31, "Output"],
+Cell[3071, 99, 89, 1, 31, "Output"],
+Cell[3163, 102, 109, 2, 31, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

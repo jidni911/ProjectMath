@@ -1,0 +1,23 @@
+
+PROGRAM FALSE
+    F(X)=COS(X)-X*EXP(X)
+    PRINT*,"Enter A,B AND TOL"
+10  READ(5,*)A,B,TOL
+    PRINT*,'   N   A   B     C'
+    N=1
+20  C=(A*F(B)-B*F(A))/(F(B)-F(A))
+    IF(F(C).EQ.0.0)GOTO 40
+    IF(F(C)*F(A).LT.0.0)THEN
+        A=C
+    ELSE
+        B=C
+    END IF
+    PRINT 30,N,A,B,C
+30  FORMAT(3X,I5,3F10.5/)
+    IF(ABS(A-B).LT.TOL)GOTO 40
+    N=N+1
+    IF(N.GT.20)STOP!SAFETY
+    GOTO 20
+40  WRITE(6,50)C
+50  FORMAT(3X,'SOLUTION X=',F8.4)
+END PROGRAM

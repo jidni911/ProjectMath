@@ -1,0 +1,140 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3704,        130]
+NotebookOptionsPosition[      3207,        108]
+NotebookOutlinePosition[      3551,        123]
+CellTagsIndexPosition[      3508,        120]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"##", "Simpon", " ", "one", " ", "third", " ", "rule"}]], "Input",
+ CellChangeTimes->{{3.7098137297175145`*^9, 3.7098137610845532`*^9}},
+ FontSize->36],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], "=", 
+   FractionBox["1", 
+    RowBox[{"1", "+", "x"}]]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"a", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"b", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"exact", "=", 
+  RowBox[{
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "a", "b"], 
+    RowBox[{
+     RowBox[{"f", "[", "x", "]"}], 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], "//", 
+   "N"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n", "=", "10"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"h", "=", 
+   FractionBox[
+    RowBox[{"b", "-", "a"}], "n"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sum1", "=", 
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{"f", "[", 
+      RowBox[{"a", "+", 
+       RowBox[{"i", "*", "h"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", 
+       RowBox[{"n", "-", "1"}], ",", "2"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sum2", "=", 
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{"f", "[", 
+      RowBox[{"a", "+", 
+       RowBox[{"i", "*", "h"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "2", ",", 
+       RowBox[{"n", "-", "1"}], ",", "2"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"approx", "=", 
+  RowBox[{
+   RowBox[{"(", 
+    FractionBox["h", "3"], ")"}], "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"f", "[", "a", "]"}], "+", 
+     RowBox[{"4", "*", "sum1"}], "+", 
+     RowBox[{"2", "*", "sum2"}], "+", 
+     RowBox[{"f", "[", "b", "]"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", 
+  RowBox[{"approx", ",", "9"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.709813774063768*^9, 3.709814005933113*^9}, {
+  3.709814052322665*^9, 3.709814097533719*^9}}],
+
+Cell[BoxData["0.6931471805599453`"], "Output",
+ CellChangeTimes->{3.709814008946252*^9, 3.709814061545843*^9, 
+  3.709814103351965*^9}],
+
+Cell[BoxData["0.6931502306889303793`9."], "Output",
+ CellChangeTimes->{3.709814008946252*^9, 3.709814061545843*^9, 
+  3.7098141033609715`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"error", "=", 
+  RowBox[{"approx", "-", "exact"}]}]], "Input",
+ CellChangeTimes->{{3.709814113170938*^9, 3.7098141517856383`*^9}}],
+
+Cell[BoxData["3.050128985049305`*^-6"], "Output",
+ CellChangeTimes->{{3.709814139741005*^9, 3.709814152735306*^9}}]
+}, Open  ]]
+},
+WindowSize->{707, 504},
+WindowMargins->{{49, Automatic}, {Automatic, 62}},
+FrontEndVersion->"9.0 for Microsoft Windows (32-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 174, 3, 56, "Input"],
+Cell[CellGroupData[{
+Cell[756, 27, 1844, 59, 279, "Input"],
+Cell[2603, 88, 135, 2, 31, "Output"],
+Cell[2741, 92, 142, 2, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2920, 99, 153, 3, 31, "Input"],
+Cell[3076, 104, 115, 1, 63, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

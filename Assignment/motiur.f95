@@ -1,0 +1,12 @@
+    PROGRAM PIECEWISE
+    REAL X,F
+    PRINT*,"X   F"
+    X=-10
+15  IF(X.LT.0.0)F=1.0+X/SQRT(1.0+X**2)
+    IF(X.EQ.0.0)F=0.0
+    IF(X.GT.0.0)F=1.0-X/SQRT(1.0+X**2)
+    WRITE(6,20)X,F
+    X=X+0.5
+    IF(X.LE.10.0)GOTO 15
+20  FORMAT(3X,2F10.3)
+    END PROGRAM

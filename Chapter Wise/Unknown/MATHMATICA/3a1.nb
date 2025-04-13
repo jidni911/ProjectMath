@@ -1,0 +1,151 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4348,        142]
+NotebookOptionsPosition[      3787,        118]
+NotebookOutlinePosition[      4159,        134]
+CellTagsIndexPosition[      4116,        131]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"3", "a1"}], "\[IndentingNewLine]", 
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       FractionBox["1", "n"]}], ")"}], "^", "3"}], 
+    RowBox[{"(", 
+     FractionBox[
+      RowBox[{"1", "+", 
+       FractionBox["1", "n"]}], 
+      RowBox[{"1", "+", 
+       FractionBox["2", "n"]}]], ")"}], "\[Times]", 
+    FractionBox["1", "x"]}], ",", 
+   RowBox[{"n", "\[Rule]", "\[Infinity]"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6513935223787327`*^9, 3.651393552361985*^9}, {
+  3.6513936349329305`*^9, 3.6513936956014366`*^9}, {3.6513937282522945`*^9, 
+  3.65139379420921*^9}, {3.6513938281080694`*^9, 3.6513938648773346`*^9}, {
+  3.651393949070682*^9, 3.6513942379831896`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.651395584842798*^9, 3.651395588477605*^9}}],
+
+Cell[BoxData[
+ FractionBox["1", "x"]], "Output",
+ CellChangeTimes->{3.651394247780007*^9}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+  "so", " ", "the", " ", "series", " ", "is", " ", "convergent", " ", "if", "  ", 
+   FractionBox["1", "x"]}], ">", 
+  RowBox[{"1", " ", 
+   RowBox[{"i", " ", ".", "e"}], " ", "x"}], "<", 
+  RowBox[{"1", "and", " ", "divergent", " ", "if", " ", 
+   FractionBox[
+    RowBox[{"1", " "}], "x"]}], "<", 
+  RowBox[{"1", " ", 
+   RowBox[{"i", ".", "e"}], " ", "x"}], ">", "1.1"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"u1", "=", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"n", "+", "1"}], ")"}], 
+     RowBox[{"x", "^", "n"}]}], 
+    RowBox[{
+     RowBox[{"n", "^", "3"}], "\[IndentingNewLine]"}]]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"u2", "=", 
+   RowBox[{"u1", "/.", 
+    RowBox[{"n", "\[Rule]", 
+     RowBox[{"n", "+", "1"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"n", 
+     RowBox[{"(", 
+      RowBox[{
+       FractionBox["u1", "u2"], "-", "1"}], ")"}]}], "/.", 
+    RowBox[{"x", "\[Rule]", "1"}]}], ",", 
+   RowBox[{"n", "\[Rule]", "\[Infinity]"}]}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.651394286764475*^9, 3.651394303706105*^9}, {
+   3.651394338837367*^9, 3.6513944098018913`*^9}, {3.6513947014288034`*^9, 
+   3.651394821673815*^9}, {3.651395387050051*^9, 3.6513955675735683`*^9}, 
+   3.6513959774642878`*^9, 3.6513960973036985`*^9, {3.651396136912168*^9, 
+   3.6513961750386353`*^9}, {3.6513962134771023`*^9, 3.651396307841668*^9}, {
+   3.65139634320693*^9, 3.651396543402082*^9}, {3.651396579406945*^9, 
+   3.6513967029279623`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[AliasDelimiter]", "`"}]], "Input",
+ CellChangeTimes->{{3.651397592269924*^9, 3.6513976242675853`*^9}}],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{3.651396739868827*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Since", " ", "2"}], ">", "1"}], ",", " ", 
+  RowBox[{
+  "so", " ", "the", " ", "series", " ", "is", " ", "convergent", " ", "by", 
+   " ", "higher", " ", "ratio", " ", 
+   RowBox[{"test", ".", "\[IndentingNewLine]"}]}]}]], "Input",
+ CellChangeTimes->{{3.651397005584094*^9, 3.651397212502857*^9}, {
+  3.65139733914388*^9, 3.6513973437458878`*^9}}]
+},
+WindowSize->{1366, 686},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 759, 20, 132, "Input"],
+Cell[CellGroupData[{
+Cell[1342, 44, 92, 1, 43, "Input"],
+Cell[1437, 47, 90, 2, 62, "Output"]
+}, Open  ]],
+Cell[1542, 52, 1606, 43, 280, "Input"],
+Cell[CellGroupData[{
+Cell[3173, 99, 128, 2, 43, "Input"],
+Cell[3304, 103, 70, 1, 42, "Output"]
+}, Open  ]],
+Cell[3389, 107, 394, 9, 71, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

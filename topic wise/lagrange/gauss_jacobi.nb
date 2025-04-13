@@ -1,0 +1,402 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     11715,        393]
+NotebookOptionsPosition[     10979,        365]
+NotebookOutlinePosition[     11321,        380]
+CellTagsIndexPosition[     11278,        377]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"Print", "[", "\"\<Iter     X              Y          Z\>\"", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"x", "=", "0"}], ";", 
+  RowBox[{"y", "=", "0"}], ";", 
+  RowBox[{"z", "=", "0"}], ";", 
+  RowBox[{"tol", "=", "0.0001"}], ";", 
+  RowBox[{"i", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"x1", "=", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "27"], 
+     RowBox[{"(", 
+      RowBox[{"85", "-", 
+       RowBox[{"6", "y"}], "+", "z"}], ")"}]}], "//", "N"}]}], ";", 
+  RowBox[{"y1", "=", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "15"], 
+     RowBox[{"(", 
+      RowBox[{"72", "-", 
+       RowBox[{"6", "x"}], "-", 
+       RowBox[{"2", "z"}]}], ")"}]}], "//", "N"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"z1", "=", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "54"], 
+     RowBox[{"(", 
+      RowBox[{"110", "-", "x", "-", "y"}], ")"}]}], "//", "N"}]}], ";", 
+  RowBox[{"error", "=", 
+   RowBox[{"x", "-", "x1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"While", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Abs", "[", "error", "]"}], ">", "tol"}], ",", 
+   RowBox[{
+    RowBox[{"x1", "=", 
+     RowBox[{
+      RowBox[{
+       FractionBox["1", "27"], 
+       RowBox[{"(", 
+        RowBox[{"85", "-", 
+         RowBox[{"6", "y"}], "+", "z"}], ")"}]}], "//", "N"}]}], ";", 
+    RowBox[{"y1", "=", 
+     RowBox[{
+      RowBox[{
+       FractionBox["1", "15"], 
+       RowBox[{"(", 
+        RowBox[{"72", "-", 
+         RowBox[{"6", "x"}], "-", 
+         RowBox[{"2", "z"}]}], ")"}]}], "//", "N"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"z1", "=", 
+     RowBox[{
+      RowBox[{
+       FractionBox["1", "54"], 
+       RowBox[{"(", 
+        RowBox[{"110", "-", "x", "-", "y"}], ")"}]}], "//", "N"}]}], ";", 
+    RowBox[{"Print", "[", 
+     RowBox[{"i", ",", 
+      RowBox[{"PaddedForm", "[", 
+       RowBox[{"x1", ",", 
+        RowBox[{"{", 
+         RowBox[{"10", ",", "3"}], "}"}]}], "]"}], ",", 
+      RowBox[{"PaddedForm", "[", 
+       RowBox[{"y1", ",", 
+        RowBox[{"{", 
+         RowBox[{"10", ",", "3"}], "}"}]}], "]"}], ",", 
+      RowBox[{"PaddedForm", "[", 
+       RowBox[{"z1", ",", 
+        RowBox[{"{", 
+         RowBox[{"10", ",", "3"}], "}"}]}], "]"}]}], "]"}], ";", 
+    RowBox[{"error", "=", 
+     RowBox[{"x", "-", "x1"}]}], ";", 
+    RowBox[{"x", "=", "x1"}], ";", 
+    RowBox[{"y", "=", "y1"}], ";", 
+    RowBox[{"z", "=", "z1"}], ";", 
+    RowBox[{"i", "++"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.716174599300861*^9, 3.7161749551683645`*^9}, {
+  3.716174997760959*^9, 3.716175008608309*^9}, {3.7564629186918755`*^9, 
+  3.756462958252345*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"Iter     X              Y          Z\"\>"], "Print",
+ CellChangeTimes->{3.7564629996236176`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       3.148\"\>",
+     3.1481481481481484`,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ], "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       4.800\"\>",
+     4.8,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ], "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       2.037\"\>",
+     2.037037037037037,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ]}],
+  SequenceForm[1, 
+   PaddedForm[3.1481481481481484`, {10, 3}], 
+   PaddedForm[4.8, {10, 3}], 
+   PaddedForm[2.037037037037037, {10, 3}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.7564629996392174`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"2", "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       2.157\"\>",
+     2.1569272976680383`,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ], "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       3.269\"\>",
+     3.269135802469136,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ], "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       1.890\"\>",
+     1.8898491083676268`,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ]}],
+  SequenceForm[2, 
+   PaddedForm[2.1569272976680383`, {10, 3}], 
+   PaddedForm[3.269135802469136, {10, 3}], 
+   PaddedForm[1.8898491083676268`, {10, 3}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.7564629996392174`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"3", "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       2.492\"\>",
+     2.491667936798252,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ], "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       3.685\"\>",
+     3.685249199817101,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ], "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       1.937\"\>",
+     1.9365543870344968`,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ]}],
+  SequenceForm[3, 
+   PaddedForm[2.491667936798252, {10, 3}], 
+   PaddedForm[3.685249199817101, {10, 3}], 
+   PaddedForm[1.9365543870344968`, {10, 3}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.7564629996392174`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"4", "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       2.401\"\>",
+     2.4009281180789586`,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ], "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       3.545\"\>",
+     3.545125573676099,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ], "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       1.923\"\>",
+     1.922649682655271,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ]}],
+  SequenceForm[4, 
+   PaddedForm[2.4009281180789586`, {10, 3}], 
+   PaddedForm[3.545125573676099, {10, 3}], 
+   PaddedForm[1.922649682655271, {10, 3}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.7564629996392174`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"5", "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       2.432\"\>",
+     2.4315517126147657`,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ], "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       3.583\"\>",
+     3.5832754617477134`,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ], "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       1.927\"\>",
+     1.9269249316341654`,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ]}],
+  SequenceForm[5, 
+   PaddedForm[2.4315517126147657`, {10, 3}], 
+   PaddedForm[3.5832754617477134`, {10, 3}], 
+   PaddedForm[1.9269249316341654`, {10, 3}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.7564629996392174`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"6", "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       2.423\"\>",
+     2.4232323022647364`,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ], "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       3.570\"\>",
+     3.5704559907362055`,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ], "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       1.926\"\>",
+     1.925651348622917,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ]}],
+  SequenceForm[6, 
+   PaddedForm[2.4232323022647364`, {10, 3}], 
+   PaddedForm[3.5704559907362055`, {10, 3}], 
+   PaddedForm[1.925651348622917, {10, 3}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.7564629996392174`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"7", "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       2.426\"\>",
+     2.4260339038594694`,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ], "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       3.574\"\>",
+     3.573953565944383,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ], "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       1.926\"\>",
+     1.9260428093888713`,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ]}],
+  SequenceForm[7, 
+   PaddedForm[2.4260339038594694`, {10, 3}], 
+   PaddedForm[3.573953565944383, {10, 3}], 
+   PaddedForm[1.9260428093888713`, {10, 3}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.7564629996392174`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"8", "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       2.425\"\>",
+     2.4252711634712063`,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ], "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       3.573\"\>",
+     3.572780730537696,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ], "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       1.926\"\>",
+     1.9259261579665954`,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ]}],
+  SequenceForm[8, 
+   PaddedForm[2.4252711634712063`, {10, 3}], 
+   PaddedForm[3.572780730537696, {10, 3}], 
+   PaddedForm[1.9259261579665954`, {10, 3}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.7564629996392174`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"9", "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       2.426\"\>",
+     2.425527473138534,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ], "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       3.573\"\>",
+     3.5731013802159715`,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ], "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       1.926\"\>",
+     1.9259620019627979`,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ]}],
+  SequenceForm[9, 
+   PaddedForm[2.425527473138534, {10, 3}], 
+   PaddedForm[3.5731013802159715`, {10, 3}], 
+   PaddedForm[1.9259620019627979`, {10, 3}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.7564629996392174`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"10", "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       2.425\"\>",
+     2.4254575452098877`,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ], "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       3.573\"\>",
+     3.5729940771495463`,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ], "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"       1.926\"\>",
+     1.925951317530472,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}]& ]}],
+  SequenceForm[10, 
+   PaddedForm[2.4254575452098877`, {10, 3}], 
+   PaddedForm[3.5729940771495463`, {10, 3}], 
+   PaddedForm[1.925951317530472, {10, 3}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.7564629996392174`*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1366, 686},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 2667, 84, 323, "Input"],
+Cell[CellGroupData[{
+Cell[3271, 110, 114, 1, 23, "Print"],
+Cell[3388, 113, 725, 23, 23, "Print"],
+Cell[4116, 138, 757, 23, 23, "Print"],
+Cell[4876, 163, 753, 23, 23, "Print"],
+Cell[5632, 188, 753, 23, 23, "Print"],
+Cell[6388, 213, 761, 23, 23, "Print"],
+Cell[7152, 238, 757, 23, 23, "Print"],
+Cell[7912, 263, 757, 23, 23, "Print"],
+Cell[8672, 288, 757, 23, 23, "Print"],
+Cell[9432, 313, 757, 23, 23, "Print"],
+Cell[10192, 338, 759, 23, 23, "Print"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

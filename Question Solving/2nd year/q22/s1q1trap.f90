@@ -1,0 +1,20 @@
+f(x)=exp(sin(x))
+a=0
+b = 3.1416/2.0
+n=12
+h = (b-a)/real(n)
+
+s=f(a)+f(b)
+do i=1,n-1
+     s=s+2*f(a+i*h)
+
+enddo
+s=s*h/2.0
+
+print 100,s
+100 format('evaluation value= ',f10.5)
+print*,'true value=',3.10438
+print 200,3.10438-s
+200 format('error = ',f10.5)
+end
+

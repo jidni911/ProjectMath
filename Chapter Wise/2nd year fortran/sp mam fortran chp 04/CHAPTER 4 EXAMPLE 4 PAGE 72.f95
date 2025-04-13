@@ -1,0 +1,10 @@
+!==PROGRAM TO FIND THE VALUE OF PIE
+     SUM=0.0
+     DO K=1,10000
+        SUM=SUM+1.0/FLOAT(K**2)
+     ENDDO
+       PI=SQRT(6.0*SUM)
+       WRITE(6,10)PI
+  10   FORMAT(3X,"VALUE OF PI=",F14.10/)
+      PRINT*,"NUMBER OF TERMS=",K-1
+      END

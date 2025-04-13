@@ -1,0 +1,188 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5263,        178]
+NotebookOptionsPosition[      4516,        147]
+NotebookOutlinePosition[      4887,        163]
+CellTagsIndexPosition[      4844,        160]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"DS", "=", 
+  RowBox[{"DSolve", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"y", "'"}], "[", "t", "]"}], "\[Equal]", 
+       RowBox[{"k", "*", 
+        RowBox[{"y", "[", "t", "]"}]}]}], ",", 
+      RowBox[{
+       RowBox[{"y", "[", "0", "]"}], "\[Equal]", "500"}]}], "}"}], ",", 
+    RowBox[{"y", "[", "t", "]"}], ",", "t"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8440383063041286`*^9, 3.844038372073844*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"y", "[", "t", "]"}], "\[Rule]", 
+    RowBox[{"500", " ", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"k", " ", "t"}]]}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.8440383781734548`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"y", "[", "t_", "]"}], "=", 
+   RowBox[{"DS", "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "1", ",", "2"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"S", "=", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"y", "[", "10", "]"}], "\[Equal]", 
+     RowBox[{"(", 
+      RowBox[{"500", "+", 
+       RowBox[{"500", "*", "0.15"}]}], ")"}]}], ",", "k"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.844038382401062*^9, 3.844038445440773*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Solve", "::", "ifun"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Inverse functions are being used by \
+\[NoBreak]\\!\\(Solve\\)\[NoBreak], so some solutions may not be found; use \
+Reduce for complete solution information. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Solve/ifun\\\", ButtonNote -> \
+\\\"Solve::ifun\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.844038447905577*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"k", "\[Rule]", "0.013976194237515869`"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.844038447905577*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"k", "=", 
+   RowBox[{"S", "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "1", ",", "2"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"NSolve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"y", "[", "t", "]"}], "\[Equal]", "30"}], ",", "t"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.844038456360792*^9, 3.844038479714033*^9}, {
+  3.84403852347211*^9, 3.844038590536628*^9}, {3.844038645620324*^9, 
+  3.844038655073941*^9}, {3.844038692904008*^9, 3.844038758698523*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NSolve", "::", "ifun"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Inverse functions are being used by \[NoBreak]\\!\\(NSolve\
+\\)\[NoBreak], so some solutions may not be found; use Reduce for complete \
+solution information. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/NSolve\\\", ButtonNote -> \\\"NSolve::ifun\\\"]\\)\
+\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.8440385367633333`*^9, 3.84403859178463*^9}, {
+  3.84403864884953*^9, 3.844038655869542*^9}, {3.844038693855609*^9, 
+  3.844038760024525*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"t", "\[Rule]", 
+    RowBox[{"-", "201.30020153899153`"}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{{3.8440385367633333`*^9, 3.84403859180023*^9}, {
+  3.84403864884953*^9, 3.8440386558851423`*^9}, {3.844038693871209*^9, 
+  3.844038760024525*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"y", "[", "30", "]"}], "/.", 
+  RowBox[{"k", "\[Rule]", 
+   RowBox[{"%", "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "1", ",", "2"}], "]"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.8440387657809353`*^9, 3.8440387949061866`*^9}}],
+
+Cell[BoxData["760.4375`"], "Output",
+ CellChangeTimes->{3.8440387968561897`*^9}]
+}, Open  ]]
+},
+WindowSize->{1366, 686},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>2. Inherited,
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 488, 14, 60, "Input"],
+Cell[1071, 38, 272, 8, 59, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1380, 51, 517, 16, 99, "Input"],
+Cell[1900, 69, 531, 11, 85, "Message"],
+Cell[2434, 82, 165, 4, 59, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2636, 91, 519, 14, 99, "Input"],
+Cell[3158, 107, 644, 13, 85, "Message"],
+Cell[3805, 122, 307, 7, 84, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4149, 134, 268, 7, 60, "Input"],
+Cell[4420, 143, 80, 1, 84, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

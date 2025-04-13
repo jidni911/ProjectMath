@@ -1,0 +1,265 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7915,        256]
+NotebookOptionsPosition[      7157,        227]
+NotebookOutlinePosition[      7528,        243]
+CellTagsIndexPosition[      7485,        240]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"u", "[", 
+    RowBox[{"x_", ",", "y_"}], "]"}], "=", 
+   RowBox[{
+    SuperscriptBox["x", "3"], "-", 
+    RowBox[{"3", "x", "*", 
+     SuperscriptBox["y", "2"]}], "+", 
+    RowBox[{"3", 
+     SuperscriptBox["x", "2"]}], "-", 
+    RowBox[{"3", 
+     SuperscriptBox["y", "2"]}], "+", "1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["u", "x"], "=", 
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"u", "[", 
+      RowBox[{"x", ",", "y"}], "]"}], ",", "x"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["u", "y"], "=", 
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"u", "[", 
+      RowBox[{"x", ",", "y"}], "]"}], ",", "y"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["u", "xx"], "=", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"u", "[", 
+     RowBox[{"x", ",", "y"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "2"}], "}"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["u", 
+   RowBox[{"yy", "\[IndentingNewLine]"}]], "=", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"u", "[", 
+     RowBox[{"x", ",", "y"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", "2"}], "}"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      SubscriptBox["u", "xx"], "+", 
+      SubscriptBox["u", "yy"]}], "\[Equal]", "0"}], ",", 
+    RowBox[{"Print", "[", "\"\<u harmonic.\>\"", "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<u not harmonic.\>\"", "]"}]}], "]"}], 
+  "\[IndentingNewLine]", " "}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.7354290684171314`*^9, 3.735429188833743*^9}, {
+  3.7354293084079533`*^9, 3.7354293364724026`*^9}, {3.7354294417101874`*^9, 
+  3.735429454237009*^9}, {3.735429730419894*^9, 3.7354297408875127`*^9}, {
+  3.735429770995566*^9, 3.7354299184626245`*^9}, {3.7354299951523595`*^9, 
+  3.735430235033981*^9}, {3.7354302772788553`*^9, 3.7354307362784615`*^9}, {
+  3.7354309288451996`*^9, 3.7354309424484234`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"6", "+", 
+  RowBox[{"6", " ", "x"}]}]], "Output",
+ CellChangeTimes->{3.7354307882889524`*^9, 3.7354309544448442`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "6"}], "-", 
+  RowBox[{"6", " ", "x"}]}]], "Output",
+ CellChangeTimes->{3.7354307882889524`*^9, 3.7354309544448442`*^9}],
+
+Cell[BoxData["\<\"u harmonic.\"\>"], "Print",
+ CellChangeTimes->{3.7354309544604445`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Exit", "[", "]"}], "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.7354312847286243`*^9, 3.735431290641035*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"u", "[", 
+    RowBox[{"x_", ",", "y_"}], "]"}], "=", 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["x", "3"], "-", 
+     RowBox[{"3", "x", "*", 
+      SuperscriptBox["y", "2"]}]}], 
+    RowBox[{
+     SuperscriptBox["x", "2"], "+", 
+     SuperscriptBox["y", "2"]}]]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"v", "[", 
+    RowBox[{"x_", ",", "y_"}], "]"}], "=", 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["y", "3"], "-", 
+     RowBox[{"3", 
+      SuperscriptBox["x", "2"], "*", "y"}]}], 
+    RowBox[{
+     SuperscriptBox["x", "2"], "+", 
+     SuperscriptBox["y", "2"]}]]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"u0", "=", 
+   RowBox[{
+    RowBox[{"u", "[", 
+     RowBox[{"x", ",", "0"}], "]"}], "/.", 
+    RowBox[{"x", "\[Rule]", "0"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"v0", "=", 
+   RowBox[{
+    RowBox[{"v", "[", 
+     RowBox[{"x", ",", "0"}], "]"}], "/.", 
+    RowBox[{"x", "\[Rule]", "0"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["u", "x"], "=", 
+  RowBox[{"Limit", "[", 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      RowBox[{"u", "[", 
+       RowBox[{"x", ",", "0"}], "]"}], "-", "u0"}], "x"], ",", 
+    RowBox[{"x", "\[Rule]", "0"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["v", "x"], "=", 
+  RowBox[{"Limit", "[", 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      RowBox[{"v", "[", 
+       RowBox[{"x", ",", "0"}], "]"}], "-", "v0"}], "x"], ",", 
+    RowBox[{"x", "\[Rule]", "0"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["u", "y"], "=", 
+  RowBox[{"Limit", "[", 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      RowBox[{"u", "[", 
+       RowBox[{"0", ",", "y"}], "]"}], "-", "u0"}], "y"], ",", 
+    RowBox[{"y", "\[Rule]", "0"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["v", "y"], "=", 
+  RowBox[{"Limit", "[", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"v", "[", 
+        RowBox[{"0", ",", "y"}], "]"}], "-", "v0"}]}], "y"], ",", 
+    RowBox[{"y", "\[Rule]", "0"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"If", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SubscriptBox["u", "x"], "\[Equal]", 
+     SubscriptBox["v", "y"]}], "&&", 
+    RowBox[{
+     SubscriptBox["v", "x"], "\[Equal]", 
+     RowBox[{"-", 
+      SubscriptBox["u", "y"]}]}]}], ",", 
+   RowBox[{
+   "Print", "[", "\"\<Cauchy-Riemann equations are satisfied\>\"", "]"}]}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.735431604934787*^9, 3.735431832180386*^9}, {
+  3.735431886749282*^9, 3.7354320140455055`*^9}, {3.7354320709700055`*^9, 
+  3.7354321755057893`*^9}, {3.735432216955062*^9, 3.735432220418268*^9}, {
+  3.7354322508227215`*^9, 3.735432270400756*^9}, {3.7354324161518116`*^9, 
+  3.7354326484050198`*^9}, {3.735432679090274*^9, 3.735432746965993*^9}, {
+  3.7354327808336525`*^9, 3.735432860814993*^9}, {3.7354329041050687`*^9, 
+  3.7354330304184904`*^9}, {3.7354330605577435`*^9, 3.735433463834052*^9}, {
+  3.7354336446383696`*^9, 3.7354336595519953`*^9}, {3.7354339511789083`*^9, 
+  3.7354339977293897`*^9}}],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{
+  3.7354334744420705`*^9, {3.7354339814897614`*^9, 3.7354340028617983`*^9}}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{
+  3.7354334744420705`*^9, {3.7354339814897614`*^9, 3.7354340028773985`*^9}}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{
+  3.7354334744420705`*^9, {3.7354339814897614`*^9, 3.7354340028773985`*^9}}],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{
+  3.7354334744420705`*^9, {3.7354339814897614`*^9, 3.7354340028773985`*^9}}],
+
+Cell[BoxData["\<\"Cauchy-Riemann equations are satisfied\"\>"], "Print",
+ CellChangeTimes->{3.7354340028929987`*^9}]
+}, Open  ]],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.735430405011879*^9}]
+},
+WindowSize->{1366, 686},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>2. Inherited,
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2071, 61, 368, "Input"],
+Cell[2654, 85, 141, 3, 84, "Output"],
+Cell[2798, 90, 159, 4, 84, "Output"],
+Cell[2960, 96, 89, 1, 43, "Print"]
+}, Open  ]],
+Cell[3064, 100, 156, 3, 99, "Input"],
+Cell[CellGroupData[{
+Cell[3245, 107, 3175, 95, 696, "Input"],
+Cell[6423, 204, 125, 2, 84, "Output"],
+Cell[6551, 208, 125, 2, 84, "Output"],
+Cell[6679, 212, 125, 2, 84, "Output"],
+Cell[6807, 216, 125, 2, 117, "Output"],
+Cell[6935, 220, 116, 1, 43, "Print"]
+}, Open  ]],
+Cell[7066, 224, 87, 1, 99, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

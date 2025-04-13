@@ -1,0 +1,35 @@
+     PROGRAM SIMPSON
+     PARAMETER(N=12)
+     F(X)=1.0/(1.0+X**2)
+     X0=0.0
+     XN=6.0
+     H=(XN-X0)/FLOAT(N)
+     S=(F(X0)+F(XN))
+     S1=0.0
+     S2=0.0
+     S3=0.0
+     S4=0.0
+     DO K=1,N-1
+       X1=X0+FLOAT(K)*H
+       F1=F(X1)
+       IF(MOD(K,2).EQ.0)S1=S1+F1
+       IF(MOD(K,2).NE.0)S2=S2+F1
+       IF(MOD(K,3).EQ.0)S3=S3+F1
+       IF(MOD(K,3).NE.0)S4=S4+F1
+     ENDDO
+     S13=(H/3.0)*(S+2.0*S1+4.0*S2)
+     S38=(3.0*H/8.0)*(S+2.0*S3+3.0*S4)
+     EXACT=ATAN(XN)-ATAN(X0)
+     WRITE(6,11)S13
+11   FORMAT(3X,"THE INTEGRAL VALUE USING 1/3RD METHOD IS=",F10.7)
+     ERROR=EXACT-S13
+     WRITE(6,12)ERROR
+12   FORMAT(3X,"THE ERROR IS=",F10.7)
+     WRITE(6,13)S38
+13   FORMAT(3X,"THE INTEGRAL VALUE USING 3/8TH METHOD IS=",F10.7)
+     ERROR=EXACT-S38
+     WRITE(6,14)ERROR
+14   FORMAT(3X,"THE ERROR IS=",F10.7)
+     END PROGRAM
+     
+     

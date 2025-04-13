@@ -1,0 +1,142 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3630,        132]
+NotebookOptionsPosition[      3207,        113]
+NotebookOutlinePosition[      3547,        128]
+CellTagsIndexPosition[      3504,        125]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"Clear", "[", 
+  RowBox[{"u", ",", "v", ",", "f", ",", "phy1", ",", "phy2"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"u", "=", 
+  RowBox[{
+   RowBox[{"x", "^", "3"}], "-", 
+   RowBox[{"3", "x", "\[Times]", 
+    RowBox[{"y", "^", "2"}]}], "+", 
+   RowBox[{"3", 
+    RowBox[{"x", "^", "2"}]}], "-", 
+   RowBox[{
+    RowBox[{"+", "3"}], 
+    RowBox[{"y", "^", "2"}]}], "+", "1"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    SubscriptBox["\[PartialD]", 
+     RowBox[{"x", ",", "x"}]], "u"}], "+", 
+   RowBox[{
+    SubscriptBox["\[PartialD]", 
+     RowBox[{"y", ",", "y"}]], "u"}]}], "\[Equal]", 
+  "0"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"phy1", "=", 
+   RowBox[{
+    RowBox[{"D", "[", 
+     RowBox[{"u", ",", "x"}], "]"}], "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"x", "\[Rule]", "z"}], ",", 
+      RowBox[{"y", "\[Rule]", "0"}]}], "}"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"phy2", "=", 
+   RowBox[{
+    RowBox[{"D", "[", 
+     RowBox[{"u", ",", "y"}], "]"}], "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"x", "\[Rule]", "z"}], ",", 
+      RowBox[{"y", "\[Rule]", "0"}]}], "}"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"f", "=", 
+  RowBox[{"\[Integral]", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"phy1", "-", 
+      RowBox[{"I", " ", "phy2"}]}], ")"}], 
+    RowBox[{"\[DifferentialD]", "x"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"v", "=", 
+  RowBox[{"Simplify", "[", 
+   RowBox[{
+    RowBox[{"Im", "[", 
+     RowBox[{"f", "/.", 
+      RowBox[{"z", "\[Rule]", 
+       RowBox[{"x", "+", 
+        RowBox[{"I", " ", "y"}]}]}]}], "]"}], "//", "ComplexExpand"}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.651241758135937*^9, 3.6512417668324347`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"1", "+", 
+  RowBox[{"3", " ", 
+   SuperscriptBox["x", "2"]}], "+", 
+  SuperscriptBox["x", "3"], "-", 
+  RowBox[{"3", " ", 
+   SuperscriptBox["y", "2"]}], "-", 
+  RowBox[{"3", " ", "x", " ", 
+   SuperscriptBox["y", "2"]}]}]], "Output",
+ CellChangeTimes->{3.651241696067387*^9, 3.6512417756079364`*^9}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.651241696067387*^9, 3.651241775610937*^9}],
+
+Cell[BoxData[
+ RowBox[{"x", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"6", " ", "z"}], "+", 
+    RowBox[{"3", " ", 
+     SuperscriptBox["z", "2"]}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.651241696067387*^9, 3.651241775612937*^9}],
+
+Cell[BoxData[
+ RowBox[{"6", " ", "x", " ", 
+  RowBox[{"(", 
+   RowBox[{"1", "+", "x"}], ")"}], " ", "y"}]], "Output",
+ CellChangeTimes->{3.651241696067387*^9, 3.651241775617937*^9}]
+}, Open  ]]
+},
+WindowSize->{1350, 686},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1761, 59, 169, "Input"],
+Cell[2344, 83, 324, 9, 31, "Output"],
+Cell[2671, 94, 95, 1, 31, "Output"],
+Cell[2769, 97, 238, 7, 33, "Output"],
+Cell[3010, 106, 181, 4, 64, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

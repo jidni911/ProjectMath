@@ -1,0 +1,487 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15213,        479]
+NotebookOptionsPosition[     14002,        432]
+NotebookOutlinePosition[     14376,        448]
+CellTagsIndexPosition[     14333,        445]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+   "Find", " ", "the", " ", "poles", " ", "and", " ", "residues", " ", "of", 
+    " ", "the", " ", "following", " ", "function", " ", "in", " ", "the", " ",
+     "complex", " ", 
+    RowBox[{"plane", ":", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"(", "i", ")"}], " ", 
+      RowBox[{"f", "[", "z_", "]"}]}]}]}], "=", 
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["z", "2"], "-", "2"}], 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"z", "+", "1"}], ")"}], "2"], 
+       RowBox[{"(", 
+        RowBox[{
+         SuperscriptBox["z", "2"], "-", "9"}], ")"}]}]], 
+     "\[IndentingNewLine]", 
+     RowBox[{"(", "ii", ")"}], " ", 
+     RowBox[{"f", "[", "z_", "]"}]}], "=", 
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       SuperscriptBox["E", "z"], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"3", "z"}], "+", "1"}], ")"}], "2"]], "\[IndentingNewLine]", 
+      RowBox[{"(", "iii", ")"}], " ", 
+      RowBox[{"f", "[", "z_", "]"}]}], "=", 
+     RowBox[{
+      RowBox[{
+       FractionBox[
+        RowBox[{"\[Pi]", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"\[Pi]", " ", "z"}], "]"}]}], 
+        RowBox[{
+         SuperscriptBox["z", "2"], 
+         RowBox[{"Sin", "[", 
+          RowBox[{"\[Pi]", " ", "z"}], "]"}]}]], "\[IndentingNewLine]", 
+       RowBox[{"(", "iv", ")"}], " ", 
+       RowBox[{"f", "[", "z_", "]"}]}], "=", 
+      RowBox[{
+       RowBox[{
+        FractionBox[
+         RowBox[{"1", "-", 
+          RowBox[{"Cos", "[", "z", "]"}]}], 
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox["z", "2"], "-", "4"}], ")"}]], 
+        "\[IndentingNewLine]", 
+        RowBox[{"(", "v", ")"}], " ", 
+        RowBox[{"f", "[", "z_", "]"}]}], "=", 
+       RowBox[{
+        RowBox[{
+         FractionBox[
+          RowBox[{"Log", "[", "z", "]"}], 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox["z", "2"], "+", "1"}], ")"}], "2"]], 
+         "\[IndentingNewLine]", 
+         RowBox[{"(", "vi", ")"}], " ", 
+         RowBox[{"f", "[", "z_", "]"}]}], "=", 
+        FractionBox[
+         SuperscriptBox["z", "2"], 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"z", "+", "\[ImaginaryI]"}], ")"}], "2"], 
+          RowBox[{"(", 
+           RowBox[{
+            SuperscriptBox["z", "2"], "+", "2"}], ")"}]}]]}]}]}]}]}]}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.9017087902773895`*^9, 3.9017091324319415`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "z_", "]"}], ":=", 
+   FractionBox[
+    SuperscriptBox["z", "2"], 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"z", "+", "\[ImaginaryI]"}], ")"}], "2"], 
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["z", "2"], "+", "2"}], ")"}]}]]}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{"poles", "=", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Denominator", "[", 
+      RowBox[{"f", "[", "z", "]"}], "]"}], "\[Equal]", "0"}], ",", "z"}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.9017091567946815`*^9, 3.9017091723236523`*^9}, {
+   3.9017093569521914`*^9, 3.90170937976367*^9}, {3.901709576065875*^9, 
+   3.901709588919592*^9}, {3.9017096434962206`*^9, 3.9017096802374744`*^9}, {
+   3.9017102067597513`*^9, 3.901710268767172*^9}, 3.901711123831566*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"z", "\[Rule]", 
+     RowBox[{"-", "\[ImaginaryI]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"z", "\[Rule]", 
+     RowBox[{"-", "\[ImaginaryI]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"z", "\[Rule]", 
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", 
+      SqrtBox["2"]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"z", "\[Rule]", 
+     RowBox[{"\[ImaginaryI]", " ", 
+      SqrtBox["2"]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.9017096470969973`*^9, 3.9017096679161863`*^9}, {
+   3.901710211586893*^9, 3.9017102214561887`*^9}, {3.901710263931573*^9, 
+   3.9017102695877786`*^9}, 3.901711129527589*^9, 3.9017113350575657`*^9, 
+   3.902142408330076*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"points", "=", " ", 
+  RowBox[{
+   RowBox[{"poles", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", "1", ",", "2"}], "]"}], "]"}], "//", 
+   "DeleteDuplicates"}]}]], "Input",
+ CellChangeTimes->{{3.9017102761142216`*^9, 3.901710291843216*^9}, {
+  3.901711302433618*^9, 3.901711306928526*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"-", "\[ImaginaryI]"}], ",", 
+   RowBox[{
+    RowBox[{"-", "\[ImaginaryI]"}], " ", 
+    SqrtBox["2"]}], ",", 
+   RowBox[{"\[ImaginaryI]", " ", 
+    SqrtBox["2"]}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.9017102882786164`*^9, 3.901710292835161*^9}, 
+   3.901711133053334*^9, {3.9017113077664056`*^9, 3.90171133765556*^9}, 
+   3.9021425091692514`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "1"}], ",", 
+    RowBox[{"i", "\[LessEqual]", 
+     RowBox[{"Length", "[", "points", "]"}]}], ",", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"point", " ", "=", " ", 
+      RowBox[{"points", "[", 
+       RowBox[{"[", "i", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"residue", " ", "=", " ", 
+      RowBox[{"Residue", "[", 
+       RowBox[{
+        RowBox[{"f", "[", "z", "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"z", ",", "point"}], "}"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Print", "[", 
+      RowBox[{
+      "\"\<For pole at \>\"", ",", "point", ",", "\"\<, residue is \>\"", ",",
+        "residue"}], "]"}]}]}], "]"}], "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.901710304127499*^9, 3.9017103057786694`*^9}, {
+  3.9017103635402455`*^9, 3.901710521642832*^9}, {3.9017105725859313`*^9, 
+  3.9017106254828076`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"For pole at \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "\[ImaginaryI]"}], 
+   "\[InvisibleSpace]", "\<\", residue is \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", "4"}], " ", "\[ImaginaryI]"}]}],
+  SequenceForm["For pole at ", 
+   Complex[0, -1], ", residue is ", 
+   Complex[0, -4]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.901710522467784*^9, 3.9017106286569023`*^9, 
+  3.901711137343526*^9, 3.901711343809306*^9, 3.902142575732551*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"For pole at \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", "\[ImaginaryI]"}], " ", 
+    SqrtBox["2"]}], "\[InvisibleSpace]", "\<\", residue is \"\>", 
+   "\[InvisibleSpace]", 
+   FractionBox["\[ImaginaryI]", 
+    RowBox[{
+     SqrtBox["2"], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        SqrtBox["2"]}], ")"}], "2"]}]]}],
+  SequenceForm[
+  "For pole at ", Complex[0, -1] 2^Rational[1, 2], ", residue is ", 
+   Complex[0, 1] 2^Rational[-1, 2] (-1 + 2^Rational[1, 2])^(-2)],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.901710522467784*^9, 3.9017106286569023`*^9, 
+  3.901711137343526*^9, 3.901711343809306*^9, 3.9021425757405777`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"For pole at \"\>", "\[InvisibleSpace]", 
+   RowBox[{"\[ImaginaryI]", " ", 
+    SqrtBox["2"]}], "\[InvisibleSpace]", "\<\", residue is \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", 
+    FractionBox["\[ImaginaryI]", 
+     RowBox[{
+      SqrtBox["2"], " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         SqrtBox["2"]}], ")"}], "2"]}]]}]}],
+  SequenceForm[
+  "For pole at ", Complex[0, 1] 2^Rational[1, 2], ", residue is ", 
+   Complex[0, -1] 2^Rational[-1, 2] (1 + 2^Rational[1, 2])^(-2)],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.901710522467784*^9, 3.9017106286569023`*^9, 
+  3.901711137343526*^9, 3.901711343809306*^9, 3.902142575748124*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", "i", ")"}], " ", 
+    RowBox[{"f", "[", "z_", "]"}]}], "=", 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["z", "2"], "-", "2"}], 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"z", "+", "1"}], ")"}], "2"], 
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["z", "2"], "-", "9"}], ")"}]}]]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.90171136827553*^9, 3.9017113716621037`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", "z_", "]"}], ":=", 
+  FractionBox[
+   RowBox[{
+    SuperscriptBox["z", "2"], "-", "2"}], 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"z", "+", "1"}], ")"}], "2"], 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["z", "2"], "-", "9"}], ")"}]}]]}], "\n", 
+ RowBox[{"poles", "=", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Denominator", "[", 
+      RowBox[{"f", "[", "z", "]"}], "]"}], "\[Equal]", "0"}], ",", "z"}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.9017091567946815`*^9, 3.9017091723236523`*^9}, {
+   3.9017093569521914`*^9, 3.90170937976367*^9}, {3.901709576065875*^9, 
+   3.901709588919592*^9}, {3.9017096434962206`*^9, 3.9017096802374744`*^9}, {
+   3.9017102067597513`*^9, 3.901710268767172*^9}, {3.901710665090455*^9, 
+   3.9017106699944553`*^9}, {3.9017109152601123`*^9, 3.9017110013514204`*^9}, 
+   3.901711085325922*^9, 3.9017111915095644`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"z", "\[Rule]", 
+     RowBox[{"-", "3"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"z", "\[Rule]", 
+     RowBox[{"-", "1"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"z", "\[Rule]", 
+     RowBox[{"-", "1"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"z", "\[Rule]", "3"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.9017096470969973`*^9, 3.9017096679161863`*^9}, {
+   3.901710211586893*^9, 3.9017102214561887`*^9}, {3.901710263931573*^9, 
+   3.9017102695877786`*^9}, 3.901710698855613*^9, 3.9017109162877655`*^9, 
+   3.9017110023096943`*^9, 3.9017110872763033`*^9, 3.9017111985679445`*^9, 
+   3.9021421318060207`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"points", "=", " ", 
+  RowBox[{
+   RowBox[{"poles", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", "1", ",", "2"}], "]"}], "]"}], "//", 
+   "DeleteDuplicates"}]}]], "Input",
+ CellChangeTimes->{{3.9017102761142216`*^9, 3.901710291843216*^9}, {
+  3.9017113796434507`*^9, 3.901711384518689*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"-", "3"}], ",", 
+   RowBox[{"-", "1"}], ",", "3"}], "}"}]], "Output",
+ CellChangeTimes->{{3.9017102882786164`*^9, 3.901710292835161*^9}, 
+   3.9017107023695207`*^9, 3.90171120263421*^9, 3.901711385241858*^9, 
+   3.9021421356490903`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "1"}], ",", 
+    RowBox[{"i", "\[LessEqual]", 
+     RowBox[{"Length", "[", "points", "]"}]}], ",", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"point", " ", "=", " ", 
+      RowBox[{"points", "[", 
+       RowBox[{"[", "i", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"residue", " ", "=", " ", 
+      RowBox[{"Residue", "[", 
+       RowBox[{
+        RowBox[{"f", "[", "z", "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"z", ",", "point"}], "}"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Print", "[", 
+      RowBox[{
+      "\"\<For pole at \>\"", ",", "point", ",", "\"\<, residue is \>\"", ",",
+        "residue"}], "]"}]}]}], "]"}], "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.901710304127499*^9, 3.9017103057786694`*^9}, {
+  3.9017103635402455`*^9, 3.901710521642832*^9}, {3.9017105725859313`*^9, 
+  3.9017106254828076`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"For pole at \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3"}], "\[InvisibleSpace]", "\<\", residue is \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", 
+    FractionBox["7", "24"]}]}],
+  SequenceForm["For pole at ", -3, ", residue is ", 
+   Rational[-7, 24]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.901710522467784*^9, 3.9017106286569023`*^9, 
+  3.901710704893149*^9, 3.901711205109218*^9, 3.9017113894219904`*^9, 
+  3.9021421388382263`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"For pole at \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}], "\[InvisibleSpace]", "\<\", residue is \"\>", 
+   "\[InvisibleSpace]", 
+   FractionBox["7", "32"]}],
+  SequenceForm["For pole at ", -1, ", residue is ", 
+   Rational[7, 32]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.901710522467784*^9, 3.9017106286569023`*^9, 
+  3.901710704893149*^9, 3.901711205109218*^9, 3.9017113894219904`*^9, 
+  3.902142138840411*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"For pole at \"\>", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\", residue is \"\>", "\[InvisibleSpace]", 
+   FractionBox["7", "96"]}],
+  SequenceForm["For pole at ", 3, ", residue is ", 
+   Rational[7, 96]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.901710522467784*^9, 3.9017106286569023`*^9, 
+  3.901710704893149*^9, 3.901711205109218*^9, 3.9017113894219904`*^9, 
+  3.902142138842388*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1536, 773},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>2.1 Inherited,
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2603, 80, 481, "Input"],
+Cell[CellGroupData[{
+Cell[3186, 104, 862, 24, 202, "Input"],
+Cell[4051, 130, 755, 21, 73, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4843, 156, 315, 8, 62, "Input"],
+Cell[5161, 166, 403, 11, 73, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5601, 182, 997, 25, 219, "Input"],
+Cell[CellGroupData[{
+Cell[6623, 211, 512, 12, 45, "Print"],
+Cell[7138, 225, 757, 20, 91, "Print"],
+Cell[7898, 247, 736, 19, 91, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[8661, 270, 479, 16, 95, "Input"],
+Cell[CellGroupData[{
+Cell[9165, 290, 956, 25, 163, "Input"],
+Cell[10124, 317, 700, 18, 61, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10861, 340, 317, 8, 62, "Input"],
+Cell[11181, 350, 288, 7, 61, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11506, 362, 997, 25, 252, "Input"],
+Cell[CellGroupData[{
+Cell[12528, 391, 502, 12, 75, "Print"],
+Cell[13033, 405, 479, 11, 75, "Print"],
+Cell[13515, 418, 459, 10, 75, "Print"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,307 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9807,        298]
+NotebookOptionsPosition[      9009,        266]
+NotebookOutlinePosition[      9381,        282]
+CellTagsIndexPosition[      9338,        279]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"DS", "=", 
+  RowBox[{"DSolve", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"y", "'"}], "[", "t", "]"}], "\[Equal]", 
+       RowBox[{"k", "*", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"y", "[", "t", "]"}], "-", "70"}], ")"}]}]}], ",", 
+      RowBox[{
+       RowBox[{"y", "[", "0", "]"}], "\[Equal]", "300"}]}], "}"}], ",", 
+    RowBox[{"y", "[", "t", "]"}], ",", "t"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8440361667115707`*^9, 3.8440361920772147`*^9}, {
+   3.8440362738837585`*^9, 3.8440362825573735`*^9}, 3.844036338530272*^9, 
+   3.8440363947371707`*^9, {3.8440364334252386`*^9, 3.8440364425668545`*^9}, 
+   3.8440364806933217`*^9, {3.844036534919017*^9, 3.84403653655702*^9}, {
+   3.8440365937623205`*^9, 3.8440366188783646`*^9}, {3.844037007662247*^9, 
+   3.844037079375573*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"y", "[", "t", "]"}], "\[Rule]", 
+    RowBox[{"10", " ", 
+     RowBox[{"(", 
+      RowBox[{"7", "+", 
+       RowBox[{"23", " ", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{"k", " ", "t"}]]}]}], ")"}]}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{{3.8440370709359584`*^9, 3.844037083774781*^9}, 
+   3.844037526302758*^9, 3.8440376243021307`*^9, 3.8440382038431487`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"y", "[", "t_", "]"}], "=", 
+   RowBox[{"DS", "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "1", ",", "2"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"S", "=", 
+  RowBox[{"NSolve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"y", "[", "3", "]"}], "\[Equal]", "200"}], ",", "k"}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.8440372320082417`*^9, 3.844037314173586*^9}, {
+  3.8440373691948824`*^9, 3.8440373697876835`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NSolve", "::", "ifun"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Inverse functions are being used by \[NoBreak]\\!\\(NSolve\
+\\)\[NoBreak], so some solutions may not be found; use Reduce for complete \
+solution information. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/NSolve\\\", ButtonNote -> \\\"NSolve::ifun\\\"]\\)\
+\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.8440376327105455`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"k", "\[Rule]", "0.3265104553238922`"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.844037559889618*^9, 3.8440376327261457`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"y1", "[", "t_", "]"}], "=", 
+  RowBox[{
+   RowBox[{"y", "[", "t", "]"}], "/.", 
+   RowBox[{"k", "\[Rule]", 
+    RowBox[{"S", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "1", ",", "2"}], "]"}], "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.8440376617577963`*^9, 3.8440376839722357`*^9}, {
+   3.844037718354696*^9, 3.8440377732043924`*^9}, 3.8440378047476473`*^9}],
+
+Cell[BoxData[
+ RowBox[{"0.3265104553238922`", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"-", "70"}], "+", 
+    RowBox[{"10", " ", 
+     RowBox[{"(", 
+      RowBox[{"7", "+", 
+       RowBox[{"23", " ", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{"0.3265104553238922`", " ", "t"}]]}]}], ")"}]}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{{3.844037733814323*^9, 3.8440377739219933`*^9}, 
+   3.844037805683649*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"y1", "[", "t", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "70"}], "}"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", "75"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "300"}], "}"}]}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8440378155740666`*^9, 3.8440378724049664`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {RGBColor[0.368417, 0.506779, 0.709798], AbsoluteThickness[1.6], Opacity[
+    1.], LineBox[CompressedData["
+1:eJwBoQJe/SFib1JlAgAAACkAAAACAAAAyi6W5ar3tz7TVPJzPMZSQEzPjlNM
+/JU/6NSqlAvoUkAgBDlkHPylPy1upZcXClNAih6ObAT8tT+FDLb7505TQL+r
+uHD4+8U/OKIXa3bbU0BZ8s1y8vvVP9Rbu/itAFVAppXYc+/75T/VV3bx035X
+QG6vf9fOq+Y/P/qAhCOpV0A1ySY7rlvnP4e4LEm/01dAxPx0Am276D8EgzaN
+3SlYQONjEZHqeus/Gu0qP8TZWEAQGSXX8nzwP4dJaoa3SFpATedd9O379T/H
+UOUIVmddQICzDzZDW/Y/cOzs48GgXUCyf8F3mLr2P2MdwuGd2l1AFhgl+0J5
+9z/rs3KzqU9eQN5I7AGY9vg/zax+DCk/X0BuqnoPQvH7P5joX5VHmmBAoHYs
+UZdQ/D/MOwnMs7pgQNJC3pLsr/w/zXXgU1/bYEA220EWl279P3RPo0Z2HWFA
+/wsJHezr/j9yW396saRhQMi2SxVL8wBA7OHYXc6/YkDhnCS29SIBQJ2n47pr
+5GJA+oL9VqBSAUAcS9OYUAljQCxPr5j1sQFAKKj9BvNTY0CQ5xIcoHACQGXE
+4TWq7GNAWBjaIvXtA0Bg8+jEYSxlQOl5aDCf6AZAFxJzbjHpZ0BSVn4rIRUH
+QAmCtU7IFGhAvDKUJqNBB0CO8X2lrkBoQI7rvxynmgdABskZ+2uZaEA0XRcJ
+r0wIQFtH+l+5TmlAgEDG4b6wCUBaVhlZI8lqQBgHJJPeeAxAuS3+o5ABbkCC
+4zmOYKUMQEG+Pw9EOG5A679PieLRDEDRWZoyW29uQL54e3/mKg1AL/8Lerfe
+bkBk6tJr7twNQIDr/D88wm9AsM2BRP5AD0CY4K9Ujs5wQKWZCpHl9hBAAAAA
+AADAckBmkDzw
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{"DefaultBoundaryStyle" -> Automatic, "ScalingFunctions" -> None},
+  PlotRange->{{0, 75}, {0, 300}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{0, 0}, {0, 0}},
+  Ticks->{Automatic, Automatic}]], "Input",
+ CellChangeTimes->{{3.8440380380304575`*^9, 3.8440380504012794`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"lst", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"t", ",", 
+       RowBox[{"y1", "[", "t", "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "90", ",", "3"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"TableForm", "[", 
+  RowBox[{"lst", ",", 
+   RowBox[{"TableHeadings", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"None", ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Time\>\"", ",", "\"\<Temp\>\""}], "}"}]}], "}"}]}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.844037943899892*^9, 3.8440380809149327`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      TagBox["\<\"Time\"\>",
+       HoldForm], 
+      TagBox["\<\"Temp\"\>",
+       HoldForm]},
+     {"0", "75.0974047244952`"},
+     {"3", "200.`"},
+     {"6", "532.64157592057`"},
+     {"9", "1418.535241995742`"},
+     {"12", "3777.8542339773962`"},
+     {"15", "10061.21116391959`"},
+     {"18", "26795.09685009882`"},
+     {"21", "71360.9130659047`"},
+     {"24", "190048.94597277135`"},
+     {"27", "506139.85042490164`"},
+     {"30", "1.3479556378326048`*^6"},
+     {"33", "3.5898860760308756`*^6"},
+     {"36", "9.560612884561993`*^6"},
+     {"39", "2.5461899567998063`*^7"},
+     {"42", "6.781033155914879`*^7"},
+     {"45", "1.805930093268067`*^8"},
+     {"48", "4.809567254403432`*^8"},
+     {"51", "1.2808877409407077`*^9"},
+     {"54", "3.41127032455999`*^9"},
+     {"57", "9.084922007823515`*^9"},
+     {"60", "2.4195035876812958`*^10"},
+     {"63", "6.443641019440197`*^10"},
+     {"66", "1.716075553630523`*^11"},
+     {"69", "4.5702659364226373`*^11"},
+     {"72", "1.217156825376128`*^12"},
+     {"75", "3.2415416480540967`*^12"},
+     {"78", "8.632899259158488`*^12"},
+     {"81", "2.2991205330808434`*^13"},
+     {"84", "6.123035919857614`*^13"},
+     {"87", "1.6306917508856097`*^14"},
+     {"90", "4.342871120161913`*^14"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxDividers->{
+     "Columns" -> {{False}}, "ColumnsIndexed" -> {}, 
+      "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[2.0999999999999996`]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   {None, OutputFormsDump`HeadedColumns}],
+  Function[BoxForm`e$, 
+   TableForm[
+   BoxForm`e$, TableHeadings -> {None, {"Time", "Temp"}}]]]], "Output",
+ CellChangeTimes->{3.8440380843157387`*^9}]
+}, Open  ]]
+},
+WindowSize->{1366, 686},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>2.1 Inherited,
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 883, 21, 62, "Input"],
+Cell[1466, 45, 457, 12, 66, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1960, 62, 490, 15, 102, "Input"],
+Cell[2453, 79, 524, 11, 87, "Message"],
+Cell[2980, 92, 187, 4, 61, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3204, 101, 401, 10, 62, "Input"],
+Cell[3608, 113, 434, 13, 66, "Output"]
+}, Open  ]],
+Cell[4057, 129, 452, 13, 62, "Input"],
+Cell[4512, 144, 1773, 37, 514, "Input"],
+Cell[CellGroupData[{
+Cell[6310, 185, 625, 19, 102, "Input"],
+Cell[6938, 206, 2055, 57, 1186, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,24 @@
+    PROGRAM SUMMATION
+    PRINT*,"ENTER M"
+5   READ*,M
+    IF((M.LT.0).OR.(MOD(M,2).EQ.0))GOTO 5
+    SUM1=0.0
+    SUM2=0.0
+    SUM3=0.0
+    J=1
+    DO N=1,M
+      SUM1=SUM1+1.0/FLOAT(N)
+      IF(MOD(N,2).NE.0)SUM2=SUM2+1.0/FLOAT(N)
+      SUM3=SUM3+REAL(J)/FLOAT(N)
+      J=-J
+    ENDDO
+    PRINT 10,SUM1
+10   FORMAT(1X,"1ST SERISE=",F8.3/)
+    PRINT 20,SUM2
+20   FORMAT(1X,"2ND SERISE=",F8.3/)
+    PRINT 30,SUM3
+30   FORMAT(1X,"3RD SERISE=",F8.3/)
+    END PROGRAM        
+        
+              
+     

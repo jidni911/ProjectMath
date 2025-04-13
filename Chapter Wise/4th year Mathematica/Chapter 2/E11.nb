@@ -1,0 +1,243 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10054,        234]
+NotebookOptionsPosition[      9538,        213]
+NotebookOutlinePosition[      9878,        228]
+CellTagsIndexPosition[      9835,        225]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"sol", "=", 
+      RowBox[{"NDSolve", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"y", "''"}], "[", "x", "]"}], "+", 
+            RowBox[{"0.3", "*", 
+             RowBox[{
+              RowBox[{"y", "'"}], "[", "x", "]"}]}], "+", 
+            RowBox[{"Sin", "[", 
+             RowBox[{"y", "[", "x", "]"}], "]"}]}], "\[Equal]", "0"}], ",", 
+          RowBox[{
+           RowBox[{"y", "[", "0", "]"}], "\[Equal]", "k"}], ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"y", "'"}], "[", "0", "]"}], "\[Equal]", "1"}]}], "}"}], 
+        ",", 
+        RowBox[{"y", "[", "x", "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "0", ",", "20"}], "}"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"f", "[", "x_", "]"}], "=", 
+      RowBox[{"sol", "[", 
+       RowBox[{"[", 
+        RowBox[{"1", ",", "1", ",", "2"}], "]"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"fig", "[", "k_", "]"}], "=", 
+      RowBox[{"Plot", "[", 
+       RowBox[{
+        RowBox[{"f", "[", "x", "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "0", ",", "20"}], "}"}], ",", 
+        RowBox[{"PlotStyle", "\[LongRightArrow]", 
+         RowBox[{"Hue", "[", 
+          RowBox[{
+           RowBox[{"0.2", "*", "k"}], "+", "0.5"}], "]"}]}], ",", 
+        RowBox[{"DisplayFunction", "\[LongRightArrow]", "Identity"}]}], 
+       "]"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"k", ",", 
+     RowBox[{"-", "2"}], ",", "2"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Show", "[", 
+   RowBox[{
+    RowBox[{"fig", "[", 
+     RowBox[{"-", "2"}], "]"}], ",", 
+    RowBox[{"fig", "[", 
+     RowBox[{"-", "1"}], "]"}], ",", 
+    RowBox[{"fig", "[", "0", "]"}], ",", 
+    RowBox[{"fig", "[", "1", "]"}], ",", 
+    RowBox[{"fig", "[", "2", "]"}], ",", 
+    RowBox[{"DisplayFunction", "\[LongRightArrow]", "$DisplayFunction"}], ",", 
+    RowBox[{"PlotRange", "\[LongRightArrow]", "All"}]}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.9365799221847963`*^9, 3.936580001152135*^9}, {
+   3.9365800750806646`*^9, 3.936580247398567*^9}, {3.936580328222309*^9, 
+   3.9365803532915535`*^9}, 3.936580424848879*^9, {3.936580464067348*^9, 
+   3.936580646930869*^9}, {3.9365806817345304`*^9, 3.9365807296890144`*^9}, {
+   3.9365807712630873`*^9, 3.9365808668444557`*^9}, {3.9365809062189245`*^9, 
+   3.9365809545322094`*^9}, {3.936581017072719*^9, 3.936581032189146*^9}, 
+   3.9365810998152647`*^9, 3.9365811588301687`*^9, 3.93658122235348*^9, 
+   3.9365812798395805`*^9, {3.9365813116324368`*^9, 3.936581333425675*^9}, {
+   3.936581413422615*^9, 3.9365814143586173`*^9}},
+ EmphasizeSyntaxErrors->True],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Plot", "::", "nonopt"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Options expected (instead of \
+\[NoBreak]\\!\\(DisplayFunction \[LongRightArrow] Identity\\)\[NoBreak]) \
+beyond position \[NoBreak]\\!\\(2\\)\[NoBreak] in \[NoBreak]\\!\\(Plot[\\(\\(\
+\\(\\(f[x]\\)\\), \\(\\({x, 0, 20}\\)\\), \\(\\(PlotStyle \[LongRightArrow] \
+\\(\\(Hue[\\(\\(\\(\\(0.2`\\\\ k\\)\\) + 0.5`\\)\\)]\\)\\)\\)\\), \
+\\(\\(DisplayFunction \[LongRightArrow] Identity\\)\\)\\)\\)]\\)\[NoBreak]. \
+An option must be a rule or a list of rules. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/nonopt\\\", ButtonNote -> \
+\\\"Plot::nonopt\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.9365812074242535`*^9, 3.936581226066286*^9}, 
+   3.9365812849719896`*^9, 3.9365813171080465`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Plot", "::", "nonopt"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Options expected (instead of \
+\[NoBreak]\\!\\(DisplayFunction \[LongRightArrow] Identity\\)\[NoBreak]) \
+beyond position \[NoBreak]\\!\\(2\\)\[NoBreak] in \[NoBreak]\\!\\(Plot[\\(\\(\
+\\(\\(f[x]\\)\\), \\(\\({x, 0, 20}\\)\\), \\(\\(PlotStyle \[LongRightArrow] \
+\\(\\(Hue[\\(\\(\\(\\(0.2`\\\\ k\\)\\) + 0.5`\\)\\)]\\)\\)\\)\\), \
+\\(\\(DisplayFunction \[LongRightArrow] Identity\\)\\)\\)\\)]\\)\[NoBreak]. \
+An option must be a rule or a list of rules. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/nonopt\\\", ButtonNote -> \
+\\\"Plot::nonopt\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.9365812074242535`*^9, 3.936581226066286*^9}, 
+   3.9365812849719896`*^9, 3.936581317217246*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Plot", "::", "nonopt"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Options expected (instead of \
+\[NoBreak]\\!\\(DisplayFunction \[LongRightArrow] Identity\\)\[NoBreak]) \
+beyond position \[NoBreak]\\!\\(2\\)\[NoBreak] in \[NoBreak]\\!\\(Plot[\\(\\(\
+\\(\\(f[x]\\)\\), \\(\\({x, 0, 20}\\)\\), \\(\\(PlotStyle \[LongRightArrow] \
+\\(\\(Hue[\\(\\(\\(\\(0.2`\\\\ k\\)\\) + 0.5`\\)\\)]\\)\\)\\)\\), \
+\\(\\(DisplayFunction \[LongRightArrow] Identity\\)\\)\\)\\)]\\)\[NoBreak]. \
+An option must be a rule or a list of rules. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/nonopt\\\", ButtonNote -> \
+\\\"Plot::nonopt\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.9365812074242535`*^9, 3.936581226066286*^9}, 
+   3.9365812849719896`*^9, 3.9365813173264465`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Plot :: \
+nonopt\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.9365812074242535`*^9, 3.936581226066286*^9}, 
+   3.9365812849719896`*^9, 3.936581317388847*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Plot", "::", "nonopt"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Options expected (instead of \
+\[NoBreak]\\!\\(DisplayFunction \[LongRightArrow] Identity\\)\[NoBreak]) \
+beyond position \[NoBreak]\\!\\(2\\)\[NoBreak] in \[NoBreak]\\!\\(Plot[\\(\\(\
+\\(\\(f[x]\\)\\), \\(\\({x, 0, 20}\\)\\), \\(\\(PlotStyle \[LongRightArrow] \
+\\(\\(Hue[\\(\\(\\(\\(0.2`\\\\ k\\)\\) + 0.5`\\)\\)]\\)\\)\\)\\), \
+\\(\\(DisplayFunction \[LongRightArrow] Identity\\)\\)\\)\\)]\\)\[NoBreak]. \
+An option must be a rule or a list of rules. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/nonopt\\\", ButtonNote -> \
+\\\"Plot::nonopt\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.9365812074242535`*^9, 3.936581226066286*^9}, 
+   3.9365812849719896`*^9, 3.936581317498047*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Show", "::", "gcomb"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Could not combine the graphics objects in \
+\[NoBreak]\\!\\(Show[\\(\\(\\(\\(Plot[\\(\\(\\(\\(f[x]\\)\\), \\(\\({x, 0, \
+20}\\)\\), \\(\\(PlotStyle \[LongRightArrow] \\(\\(Hue[\\(\\(\\(\\(0.2`\\\\ k\
+\\)\\) + 0.5`\\)\\)]\\)\\)\\)\\), \\(\\(DisplayFunction \[LongRightArrow] \
+Identity\\)\\)\\)\\)]\\)\\), \\(\\(Plot[\\(\\(\\(\\(f[x]\\)\\), \\(\\({x, 0, \
+20}\\)\\), \\(\\(PlotStyle \[LongRightArrow] \\(\\(Hue[\\(\\(\\(\\(0.2`\\\\ k\
+\\)\\) + 0.5`\\)\\)]\\)\\)\\)\\), \\(\\(DisplayFunction \[LongRightArrow] \
+Identity\\)\\)\\)\\)]\\)\\), \\(\\(Plot[\\(\\(\\(\\(f[x]\\)\\), \\(\\({x, 0, \
+20}\\)\\), \\(\\(PlotStyle \[LongRightArrow] \\(\\(Hue[\\(\\(\\(\\(0.2`\\\\ k\
+\\)\\) + 0.5`\\)\\)]\\)\\)\\)\\), \\(\\(DisplayFunction \[LongRightArrow] \
+Identity\\)\\)\\)\\)]\\)\\), \\(\\(Plot[\\(\\(\\(\\(f[x]\\)\\), \\(\\({x, 0, \
+20}\\)\\), \\(\\(PlotStyle \[LongRightArrow] \\(\\(Hue[\\(\\(\\(\\(0.2`\\\\ k\
+\\)\\) + 0.5`\\)\\)]\\)\\)\\)\\), \\(\\(DisplayFunction \[LongRightArrow] \
+Identity\\)\\)\\)\\)]\\)\\), \\(\\(Plot[\\(\\(\\(\\(f[x]\\)\\), \\(\\({x, 0, \
+20}\\)\\), \\(\\(PlotStyle \[LongRightArrow] \\(\\(Hue[\\(\\(\\(\\(0.2`\\\\ k\
+\\)\\) + 0.5`\\)\\)]\\)\\)\\)\\), \\(\\(DisplayFunction \[LongRightArrow] \
+Identity\\)\\)\\)\\)]\\)\\), \\(\\(DisplayFunction \[LongRightArrow] Identity\
+\\)\\), \\(\\(PlotRange \[LongRightArrow] All\\)\\)\\)\\)]\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Show/gcomb\\\", \
+ButtonNote -> \\\"Show::gcomb\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.9365812074242535`*^9, 3.936581226066286*^9}, 
+   3.9365812849719896`*^9, 3.936581317560447*^9}]
+}, Open  ]]
+},
+WindowSize->{1350, 686},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2866, 73, 92, "Input"],
+Cell[3449, 97, 911, 16, 21, "Message"],
+Cell[4363, 115, 909, 16, 21, "Message"],
+Cell[5275, 133, 911, 16, 21, "Message"],
+Cell[6189, 151, 605, 12, 21, "Message"],
+Cell[6797, 165, 909, 16, 21, "Message"],
+Cell[7709, 183, 1813, 27, 56, "Message"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

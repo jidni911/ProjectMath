@@ -1,0 +1,20 @@
+    Program Matrixsum
+    PARAMETER(N=3)
+    INTEGER DS,US,LS
+    DIMENSION A(N,N)
+    PRINT*,"ENTER THE MATRIX A, COLUMNWISE"
+    READ(*,*)((A(I,J),J=1,N),I=1,N)
+    DS=0.0
+    US=0.0
+    LS=0.0
+    DO I=1,N
+      DO J=1,N
+        IF(I.EQ.J)DS=DS+A(I,J)
+        IF(I.LT.J)US=US+A(I,J)
+        IF(I.GT.J)LS=LS+A(I,J)
+      ENDDO
+    ENDDO
+    WRITE(6,*)"SUM OF DIAGONAL COMPONENTS OF A = ",DS
+    WRITE(6,*)"SUM OF UPPER DIAGONAL COMPONENTS OF A = ",US
+    WRITE(6,*)"SUM OF LOWER DIAGONAL COMPONENTS OF A = ",LS
+    END PROGRAM

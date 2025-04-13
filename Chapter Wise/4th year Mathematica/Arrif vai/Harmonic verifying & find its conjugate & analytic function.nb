@@ -1,0 +1,217 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6556,        208]
+NotebookOptionsPosition[      5841,        179]
+NotebookOutlinePosition[      6213,        195]
+CellTagsIndexPosition[      6170,        192]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"u", "[", 
+     RowBox[{"x_", ",", "y_"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{"2", "x"}], "+", 
+     RowBox[{"3", 
+      SuperscriptBox["xy", "2"]}]}]}], ";"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["u", "x"], "=", 
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"u", "[", 
+      RowBox[{"x", ",", "y"}], "]"}], ",", "x"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["u", "y"], "=", 
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"u", "[", 
+      RowBox[{"x", ",", "y"}], "]"}], ",", "y"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["u", "xx"], "=", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"u", "[", 
+     RowBox[{"x", ",", "y"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "2"}], "}"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["u", "yy"], "=", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"u", "[", 
+     RowBox[{"x", ",", "y"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", "2"}], "}"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"If", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SubscriptBox["u", "xx"], "+", 
+     SubscriptBox["u", "yy"]}], "\[Equal]", "0"}], ",", 
+   RowBox[{"Print", "[", "\"\<U is harmonic\>\"", "]"}], ",", 
+   RowBox[{"Print", "[", "\"\<U is not harmonic\>\"", "]"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.824380414579419*^9, 3.824380706104314*^9}, {
+  3.824380739299632*^9, 3.8243809485959287`*^9}, {3.824383555709422*^9, 
+  3.824383607254957*^9}, {3.824383692563057*^9, 3.824383697295845*^9}, {
+  3.824383889969717*^9, 3.8243838935157743`*^9}, {3.824384079894087*^9, 
+  3.8243841035760016`*^9}, {3.824384516422539*^9, 3.824384546868491*^9}, {
+  3.8243846570237484`*^9, 3.8243846814238605`*^9}, {3.8243847190716543`*^9, 
+  3.8243847234608173`*^9}, {3.824385902359642*^9, 3.8243859551282372`*^9}, {
+  3.8243859948063936`*^9, 3.8243860745840635`*^9}}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{
+  3.8243859360231953`*^9, {3.8243860294697065`*^9, 3.8243860755838614`*^9}, 
+   3.824386268451186*^9, 3.8243863226571875`*^9, 3.8249510731871443`*^9}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{
+  3.8243859360231953`*^9, {3.8243860294697065`*^9, 3.8243860755838614`*^9}, 
+   3.824386268451186*^9, 3.8243863226571875`*^9, 3.8249510731871443`*^9}],
+
+Cell[BoxData["\<\"U is harmonic\"\>"], "Print",
+ CellChangeTimes->{{3.8243860662891407`*^9, 3.82438607559945*^9}, 
+   3.824386268451186*^9, 3.8243863226571875`*^9, 3.8249510731871443`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ux", "=", 
+   RowBox[{
+    RowBox[{"D", "[", 
+     RowBox[{
+      RowBox[{"u", "[", 
+       RowBox[{"x", ",", "y"}], "]"}], ",", "x"}], "]"}], "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"x", "\[Rule]", "z"}], ",", 
+      RowBox[{"y", "\[Rule]", "0"}]}], "}"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"uy", "=", 
+   RowBox[{
+    RowBox[{"D", "[", 
+     RowBox[{
+      RowBox[{"u", "[", 
+       RowBox[{"x", ",", "y"}], "]"}], ",", "y"}], "]"}], "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"x", "\[Rule]", "z"}], ",", 
+      RowBox[{"y", "\[Rule]", "0"}]}], "}"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"f", "=", 
+  RowBox[{"Integrate", "[", 
+   RowBox[{
+    RowBox[{"ux", "-", 
+     RowBox[{"I", "*", "uy"}]}], ",", "z"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.8243810594374886`*^9, 3.8243812773081064`*^9}, {
+  3.8243825982895374`*^9, 3.824382599101883*^9}, {3.8243828776769905`*^9, 
+  3.8243828822708964`*^9}, {3.824383520686258*^9, 3.8243835214987087`*^9}, {
+  3.8243854113178525`*^9, 3.8243854662419977`*^9}, {3.824385497625678*^9, 
+  3.824385498297398*^9}, {3.8249494972019415`*^9, 3.824949497998711*^9}}],
+
+Cell[BoxData[
+ RowBox[{"2", " ", "z"}]], "Output",
+ CellChangeTimes->{
+  3.824382882879692*^9, 3.824383522466794*^9, 3.824384695639268*^9, 
+   3.8243847292876067`*^9, {3.8243854758182383`*^9, 3.8243854990155735`*^9}, 
+   3.824385737601078*^9, 3.8243860807857304`*^9, 3.8243862254925385`*^9, 
+   3.8243862737156067`*^9, 3.8243863264688234`*^9, 3.8249510842315054`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+  "which", " ", "is", " ", "the", " ", "corresponding", " ", "analytic", " ", 
+   "function"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.8243858065223722`*^9, 3.824385856354821*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"v", "=", 
+  RowBox[{
+   RowBox[{"Im", "[", 
+    RowBox[{"f", "/.", 
+     RowBox[{"z", "\[Rule]", 
+      RowBox[{"x", "+", 
+       RowBox[{"I", "*", "y"}]}]}]}], "]"}], "//", 
+   "ComplexExpand"}]}]], "Input",
+ CellChangeTimes->{{3.824386164923243*^9, 3.824386191322857*^9}, {
+  3.824386239005442*^9, 3.8243862440350847`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"2", " ", "y"}]], "Output",
+ CellChangeTimes->{
+  3.82438619205706*^9, {3.8243862336781397`*^9, 3.82438624481616*^9}, 
+   3.8243862824170876`*^9, 3.824386335169901*^9, 3.824951088183384*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+  "which", " ", "is", " ", "the", " ", "corresponding", " ", "analytic", " ", 
+   "function"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.8243862905713177`*^9, 3.824386310301185*^9}}]
+},
+WindowSize->{767, 601},
+WindowMargins->{{Automatic, 291}, {24, Automatic}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1995, 58, 222, "Input"],
+Cell[2578, 82, 199, 3, 44, "Output"],
+Cell[2780, 87, 199, 3, 44, "Output"],
+Cell[2982, 92, 188, 2, 32, "Print"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3207, 99, 1196, 34, 104, "Input"],
+Cell[4406, 135, 367, 6, 44, "Output"]
+}, Open  ]],
+Cell[4788, 144, 222, 5, 45, "Input"],
+Cell[CellGroupData[{
+Cell[5035, 153, 349, 10, 45, "Input"],
+Cell[5387, 165, 213, 4, 77, "Output"]
+}, Open  ]],
+Cell[5615, 172, 222, 5, 45, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,185 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5828,        176]
+NotebookOptionsPosition[      5227,        151]
+NotebookOutlinePosition[      5598,        167]
+CellTagsIndexPosition[      5555,        164]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.9017597067084603`*^9, 3.901759861632333*^9}, 
+   3.9017601932733154`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"n", "=", 
+   RowBox[{"Input", "[", "\"\<enter number of point\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"For", "[", 
+    RowBox[{
+     RowBox[{"i", "=", "0"}], ",", 
+     RowBox[{"i", "\[LessEqual]", 
+      RowBox[{"n", "-", "1"}]}], ",", 
+     RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"x", "[", "i", "]"}], "=", 
+       RowBox[{"Input", "[", "\"\<enter x value\>\"", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"y", "[", "i", "]"}], "=", 
+       RowBox[{"Input", "[", "\"\<enter y value\>\"", "]"}]}], ";"}]}], 
+    "\[IndentingNewLine]", "    ", "\[IndentingNewLine]", "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"x0", "=", 
+   RowBox[{"Input", "[", "\"\<enter the point\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sum1", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"For", "[", 
+    RowBox[{
+     RowBox[{"j", "=", "0"}], ",", 
+     RowBox[{"j", "\[LessEqual]", 
+      RowBox[{"n", "-", "1"}]}], ",", 
+     RowBox[{"j", "++"}], ",", 
+     RowBox[{
+      RowBox[{"prod", "=", "1"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"For", "[", 
+       RowBox[{
+        RowBox[{"i", "=", "0"}], ",", 
+        RowBox[{"i", "\[LessEqual]", 
+         RowBox[{"n", "-", "1"}]}], ",", 
+        RowBox[{"i", "++"}], ",", 
+        RowBox[{
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"i", "\[NotEqual]", "j"}], ",", 
+           RowBox[{"prod", "=", 
+            RowBox[{"prod", "*", 
+             FractionBox[
+              RowBox[{"x0", "-", 
+               RowBox[{"x", "[", "i", "]"}]}], 
+              RowBox[{
+               RowBox[{"x", "[", "j", "]"}], "-", 
+               RowBox[{"x", "[", "i", "]"}]}]]}]}]}], "]"}], ";"}]}], " ", 
+       "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"sum1", "=", 
+       RowBox[{"sum1", "+", 
+        RowBox[{"prod", "*", 
+         RowBox[{"y", "[", "j", "]"}]}]}]}], ";"}]}], "   ", "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<the interpolating result =\>\"", ",", " ", 
+    RowBox[{"PaddedForm", "[", 
+     RowBox[{"sum1", ",", 
+      RowBox[{"{", 
+       RowBox[{"12", ",", "9"}], "}"}]}], "]"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8706547132115283`*^9, 3.870654724271948*^9}, {
+  3.870655013406856*^9, 3.8706552540528793`*^9}, {3.8706552998389597`*^9, 
+  3.870655583650258*^9}, {3.870655633882346*^9, 3.8706556355047493`*^9}, {
+  3.8706557872150154`*^9, 3.870655796980633*^9}, {3.870655832595495*^9, 
+  3.870656073241518*^9}, {3.8706561829409103`*^9, 3.870656183346511*^9}, {
+  3.8706562939039054`*^9, 3.870656295417108*^9}, {3.8706567609375257`*^9, 
+  3.8706567640575314`*^9}, {3.870657277485633*^9, 3.8706572839908447`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"the interpolating result =\"\>", "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"   4.208054593\"\>",
+     4.208054593065754,
+     AutoDelete->True],
+    PaddedForm[#, {12, 9}]& ]}],
+  SequenceForm["the interpolating result =", 
+   PaddedForm[4.208054593065754, {12, 9}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8706563328259735`*^9, 3.870657253477191*^9, 
+  3.8713395297455573`*^9, 3.901760961855465*^9, 3.9017610339275913`*^9, 
+  3.901761121864946*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.9017610840816793`*^9, 3.9017610851736813`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.9017610343331923`*^9, 3.9017610367823963`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+   "Using", " ", "Newtons", " ", "Interpolation", " ", "Formulla", " ", 
+    "find", " ", "y", 
+    RowBox[{"(", 
+     RowBox[{"\[Sqrt]", "155"}], ")"}], "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", "  ", "x", "      ", "150", "      ", "152", "      ",
+     "154", "       ", "156", "\[IndentingNewLine]", "y"}], "=", 
+   RowBox[{
+    RowBox[{"\[Sqrt]", "x"}], "   ", "12.247", "   ", "12.329", "   ", 
+    "12.410", "    ", "12.490"}]}], "\[IndentingNewLine]", "*)"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Sqrt]", "155"}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.9017610504948206`*^9, 3.9017610595740366`*^9}}],
+
+Cell[BoxData["12.449899597988733`"], "Output",
+ CellChangeTimes->{{3.9017610559860306`*^9, 3.9017610603852377`*^9}}]
+}, Open  ]]
+},
+WindowSize->{1024, 686},
+WindowMargins->{{-8, Automatic}, {Automatic, 0}},
+Magnification:>1.7 Inherited,
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 122, 2, 50, "Input"],
+Cell[CellGroupData[{
+Cell[705, 26, 2934, 76, 533, "Input"],
+Cell[3642, 104, 527, 13, 35, "Print"]
+}, Open  ]],
+Cell[4184, 120, 96, 1, 50, "Input"],
+Cell[4283, 123, 96, 1, 50, "Input"],
+Cell[4382, 126, 539, 12, 184, "Input"],
+Cell[CellGroupData[{
+Cell[4946, 142, 146, 3, 53, "Input"],
+Cell[5095, 147, 116, 1, 49, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,369 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12638,        359]
+NotebookOptionsPosition[     11916,        333]
+NotebookOutlinePosition[     12287,        349]
+CellTagsIndexPosition[     12244,        346]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"Exit", "[", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"M", "=", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"5", ",", "3", ",", 
+        RowBox[{"-", "3"}], ",", 
+        RowBox[{"-", "1"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"3", ",", "2", ",", 
+        RowBox[{"-", "2"}], ",", 
+        RowBox[{"-", "1"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2", ",", 
+        RowBox[{"-", "1"}], ",", "2", ",", "8"}], "}"}]}], "}"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"d", "=", 
+   RowBox[{"M", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2", ",", "3"}], "}"}]}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"d1", "=", 
+   RowBox[{"M", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", 
+      RowBox[{"{", 
+       RowBox[{"4", ",", "2", ",", "3"}], "}"}]}], "]"}], "]"}]}], ";", " ", 
+  RowBox[{"d2", "=", 
+   RowBox[{"M", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "4", ",", "3"}], "}"}]}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"d3", "=", 
+   RowBox[{"M", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2", ",", "4"}], "}"}]}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Det", "[", "d1", "]"}], "/", 
+     RowBox[{"Det", "[", "d", "]"}]}], ",", 
+    RowBox[{
+     RowBox[{"Det", "[", "d2", "]"}], "/", 
+     RowBox[{"Det", "[", "d", "]"}]}], ",", 
+    RowBox[{
+     RowBox[{"Det", "[", "d3", "]"}], "/", 
+     RowBox[{"Det", "[", "d", "]"}]}]}], "}"}], " "}]}], "Input",
+ CellChangeTimes->{{3.70451649822031*^9, 3.704516615922517*^9}, {
+  3.704517011149211*^9, 3.704517138117834*^9}, {3.7045174767788286`*^9, 
+  3.70451750039727*^9}, {3.7045175977570415`*^9, 3.704517600939447*^9}, {
+  3.7045176850859947`*^9, 3.704517686287197*^9}, {3.704517839151065*^9, 
+  3.7045178553126936`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part \[NoBreak]\\!\\({4, 2, 3}\\)\[NoBreak] of \
+\[NoBreak]\\!\\({\\(\\({5, 3, \\(\\(-3\\)\\), \\(\\(-1\\)\\)}\\)\\), \
+\\(\\({3, 2, \\(\\(-2\\)\\), \\(\\(-1\\)\\)}\\)\\), \\(\\({2, \\(\\(-1\\)\\), \
+2, 8}\\)\\)}\\)\[NoBreak] does not exist. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/partw\\\", ButtonNote -> \
+\\\"Part::partw\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.704517606025056*^9, 3.704517692558408*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part \[NoBreak]\\!\\({1, 4, 3}\\)\[NoBreak] of \
+\[NoBreak]\\!\\({\\(\\({5, 3, \\(\\(-3\\)\\), \\(\\(-1\\)\\)}\\)\\), \
+\\(\\({3, 2, \\(\\(-2\\)\\), \\(\\(-1\\)\\)}\\)\\), \\(\\({2, \\(\\(-1\\)\\), \
+2, 8}\\)\\)}\\)\[NoBreak] does not exist. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/partw\\\", ButtonNote -> \
+\\\"Part::partw\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.704517606025056*^9, 3.7045176926676083`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part \[NoBreak]\\!\\({1, 2, 4}\\)\[NoBreak] of \
+\[NoBreak]\\!\\({\\(\\({5, 3, \\(\\(-3\\)\\), \\(\\(-1\\)\\)}\\)\\), \
+\\(\\({3, 2, \\(\\(-2\\)\\), \\(\\(-1\\)\\)}\\)\\), \\(\\({2, \\(\\(-1\\)\\), \
+2, 8}\\)\\)}\\)\[NoBreak] does not exist. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/partw\\\", ButtonNote -> \
+\\\"Part::partw\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.704517606025056*^9, 3.7045176927768087`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Det", "::", "matsq"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Argument \[NoBreak]\\!\\({\\({\\(\\({5, 3, \\(\\(-3\\)\\), \
+\\(\\(-1\\)\\)}\\)\\), \\(\\({3, 2, \\(\\(-2\\)\\), \\(\\(-1\\)\\)}\\)\\), \
+\\(\\({2, \\(\\(-1\\)\\), 2, 8}\\)\\)}\\)}\\)\[NoBreak] at position \
+\[NoBreak]\\!\\(1\\)\[NoBreak] is not a non-empty square matrix. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/matsq\\\", \
+ButtonNote -> \\\"Det::matsq\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.704517606025056*^9, 3.704517692870408*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Det", "::", "matsq"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Argument \[NoBreak]\\!\\({\\({\\(\\({5, 3, \\(\\(-3\\)\\), \
+\\(\\(-1\\)\\)}\\)\\), \\(\\({3, 2, \\(\\(-2\\)\\), \\(\\(-1\\)\\)}\\)\\), \
+\\(\\({2, \\(\\(-1\\)\\), 2, 8}\\)\\)}\\)}\\)\[NoBreak] at position \
+\[NoBreak]\\!\\(1\\)\[NoBreak] is not a non-empty square matrix. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/matsq\\\", \
+ButtonNote -> \\\"Det::matsq\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.704517606025056*^9, 3.7045176929796085`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Det", "::", "matsq"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Argument \[NoBreak]\\!\\({\\({\\(\\({5, 3, \\(\\(-3\\)\\), \
+\\(\\(-1\\)\\)}\\)\\), \\(\\({3, 2, \\(\\(-2\\)\\), \\(\\(-1\\)\\)}\\)\\), \
+\\(\\({2, \\(\\(-1\\)\\), 2, 8}\\)\\)}\\)}\\)\[NoBreak] at position \
+\[NoBreak]\\!\\(1\\)\[NoBreak] is not a non-empty square matrix. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/matsq\\\", \
+ButtonNote -> \\\"Det::matsq\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.704517606025056*^9, 3.704517693073209*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Det :: \
+matsq\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.704517606025056*^9, 3.7045176932604094`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Det", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"5", ",", "3", ",", 
+           RowBox[{"-", "3"}], ",", 
+           RowBox[{"-", "1"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"3", ",", "2", ",", 
+           RowBox[{"-", "2"}], ",", 
+           RowBox[{"-", "1"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"2", ",", 
+           RowBox[{"-", "1"}], ",", "2", ",", "8"}], "}"}]}], "}"}], "}"}], 
+      "\[LeftDoubleBracket]", 
+      RowBox[{"All", ",", 
+       RowBox[{"{", 
+        RowBox[{"4", ",", "2", ",", "3"}], "}"}]}], "\[RightDoubleBracket]"}],
+      "]"}], "/", 
+    RowBox[{"Det", "[", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"5", ",", "3", ",", 
+          RowBox[{"-", "3"}], ",", 
+          RowBox[{"-", "1"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"3", ",", "2", ",", 
+          RowBox[{"-", "2"}], ",", 
+          RowBox[{"-", "1"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"2", ",", 
+          RowBox[{"-", "1"}], ",", "2", ",", "8"}], "}"}]}], "}"}], "}"}], 
+     "]"}]}], ",", 
+   RowBox[{
+    RowBox[{"Det", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"5", ",", "3", ",", 
+           RowBox[{"-", "3"}], ",", 
+           RowBox[{"-", "1"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"3", ",", "2", ",", 
+           RowBox[{"-", "2"}], ",", 
+           RowBox[{"-", "1"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"2", ",", 
+           RowBox[{"-", "1"}], ",", "2", ",", "8"}], "}"}]}], "}"}], "}"}], 
+      "\[LeftDoubleBracket]", 
+      RowBox[{"All", ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "4", ",", "3"}], "}"}]}], "\[RightDoubleBracket]"}],
+      "]"}], "/", 
+    RowBox[{"Det", "[", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"5", ",", "3", ",", 
+          RowBox[{"-", "3"}], ",", 
+          RowBox[{"-", "1"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"3", ",", "2", ",", 
+          RowBox[{"-", "2"}], ",", 
+          RowBox[{"-", "1"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"2", ",", 
+          RowBox[{"-", "1"}], ",", "2", ",", "8"}], "}"}]}], "}"}], "}"}], 
+     "]"}]}], ",", 
+   RowBox[{
+    RowBox[{"Det", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"5", ",", "3", ",", 
+           RowBox[{"-", "3"}], ",", 
+           RowBox[{"-", "1"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"3", ",", "2", ",", 
+           RowBox[{"-", "2"}], ",", 
+           RowBox[{"-", "1"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"2", ",", 
+           RowBox[{"-", "1"}], ",", "2", ",", "8"}], "}"}]}], "}"}], "}"}], 
+      "\[LeftDoubleBracket]", 
+      RowBox[{"All", ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "2", ",", "4"}], "}"}]}], "\[RightDoubleBracket]"}],
+      "]"}], "/", 
+    RowBox[{"Det", "[", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"5", ",", "3", ",", 
+          RowBox[{"-", "3"}], ",", 
+          RowBox[{"-", "1"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"3", ",", "2", ",", 
+          RowBox[{"-", "2"}], ",", 
+          RowBox[{"-", "1"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"2", ",", 
+          RowBox[{"-", "1"}], ",", "2", ",", "8"}], "}"}]}], "}"}], "}"}], 
+     "]"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.7045176067114573`*^9, 3.7045176932604094`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Symbol", "::", "argx"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(Symbol\\)\[NoBreak] called with \[NoBreak]\
+\\!\\(0\\)\[NoBreak] arguments; 1 argument is expected. \\!\\(\\*ButtonBox[\\\
+\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/argx\\\", ButtonNote -> \
+\\\"Symbol::argx\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7045173045077267`*^9, 3.704517514078494*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"Det", "[", "d1", "]"}], 
+    RowBox[{"Det", "[", "d", "]"}]], ",", 
+   FractionBox[
+    RowBox[{"Det", "[", "d2", "]"}], 
+    RowBox[{"Det", "[", "D", "]"}]], ",", 
+   FractionBox[
+    RowBox[{"Det", "[", 
+     RowBox[{"Symbol", "[", "]"}], "]"}], 
+    RowBox[{"Det", "[", "d", "]"}]]}], "}"}]], "Output",
+ CellChangeTimes->{3.7045173045233264`*^9, 3.704517514078494*^9}]
+}, Open  ]]
+},
+WindowSize->{1366, 686},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>3. Inherited,
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2089, 65, 594, "Input"],
+Cell[2672, 89, 640, 12, 127, "Message"],
+Cell[3315, 103, 642, 12, 127, "Message"],
+Cell[3960, 117, 642, 12, 127, "Message"],
+Cell[4605, 131, 669, 12, 184, "Message"],
+Cell[5277, 145, 671, 12, 184, "Message"],
+Cell[5951, 159, 669, 12, 184, "Message"],
+Cell[6623, 173, 551, 11, 127, "Message"],
+Cell[7177, 186, 3760, 117, 709, "Output"],
+Cell[10940, 305, 517, 10, 69, "Message"],
+Cell[11460, 317, 440, 13, 161, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

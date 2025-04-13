@@ -1,0 +1,1000 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     37212,        991]
+NotebookOptionsPosition[     34586,        915]
+NotebookOutlinePosition[     34957,        931]
+CellTagsIndexPosition[     34914,        928]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ SuperscriptBox["\[Placeholder]", "\[Placeholder]"]], "Input",
+ CellChangeTimes->{3.6516257087049885`*^9}],
+
+Cell[BoxData[
+ RowBox[{"1", 
+  RowBox[{"(", "b", ")"}]}]], "Input",
+ CellChangeTimes->{
+  3.6515892528145676`*^9, {3.6515893074770637`*^9, 3.651589324231493*^9}, {
+   3.6515894519193172`*^9, 3.651589460717733*^9}, {3.6532728891627197`*^9, 
+   3.6532728973371344`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", 
+  RowBox[{"a", ",", "h", ",", "b", ",", "f", ",", "g", ",", "c"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"a", "=", "16"}], ";", 
+  RowBox[{"h", "=", 
+   RowBox[{"-", "12"}]}], ";", 
+  RowBox[{"b", "=", "9"}], ";", 
+  RowBox[{"g", "=", 
+   RowBox[{"-", "52"}]}], ";", 
+  RowBox[{"f", "=", 
+   RowBox[{"-", "86"}]}], ";", 
+  RowBox[{"c", "=", "44"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"delta", "=", 
+  RowBox[{
+   RowBox[{"a", "*", "b", "*", "c"}], "+", 
+   RowBox[{"2", "*", "f", "*", "g", "*", "h"}], "-", 
+   RowBox[{"a", "*", 
+    RowBox[{"f", "^", "2"}]}], "-", 
+   RowBox[{"b", "*", 
+    RowBox[{"g", "^", "2"}]}], "-", 
+   RowBox[{"c", "*", 
+    RowBox[{"h", "^", "2"}]}]}]}]}], "Input",
+ CellChangeTimes->{
+  3.6515892980546474`*^9, 3.6516226460296087`*^9, {3.6516226857004786`*^9, 
+   3.6516227601438093`*^9}, {3.651622856926379*^9, 3.6516228700616026`*^9}, {
+   3.6516229035860615`*^9, 3.6516229124624767`*^9}, {3.651622951181745*^9, 
+   3.6516231027984114`*^9}, {3.6516231864145584`*^9, 
+   3.6516234340337934`*^9}, {3.651623532594766*^9, 3.6516235341391687`*^9}, 
+   3.6516236595633893`*^9, {3.6516237330551186`*^9, 3.651623741931534*^9}, {
+   3.6516238781821733`*^9, 3.651623892768199*^9}}],
+
+Cell[BoxData[
+ RowBox[{"-", "250000"}]], "Output",
+ CellChangeTimes->{3.6516231132660294`*^9, 3.6516234701634564`*^9, 
+  3.6516236835874314`*^9, 3.6516237854244103`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"h", "^", "2"}], "-", 
+  RowBox[{"a", "*", "b"}]}]], "Input",
+ CellChangeTimes->{{3.651623820586872*^9, 3.651623833394494*^9}}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.651623841631309*^9}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+   "Since", " ", "delta", " ", "is", " ", "not", " ", "equal", " ", "to", " ",
+     "zero"}], ";", 
+   RowBox[{
+    RowBox[{"ab", "-", 
+     SuperscriptBox["h", "2"]}], "=", "0"}]}], ",", " ", 
+  RowBox[{"so", " ", "it", " ", "represents", " ", "a", " ", 
+   RowBox[{"parabola", ".", "the"}], " ", "given", " ", 
+   RowBox[{"eqn", ".", " ", "is"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"4", "x"}], "-", 
+     RowBox[{"3", "y"}]}], ")"}], "2"], "=", 
+  RowBox[{
+   RowBox[{"104", "x"}], "+", 
+   RowBox[{"172", "y"}], "-", 
+   RowBox[{"44", "--"}], "-", 
+   RowBox[{"(", "1", ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"The", " ", 
+    RowBox[{"eqs", ".", " ", "4"}], "x"}], "-", 
+   RowBox[{"3", "y"}]}], "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"0", " ", "and", " ", "104", "x"}], "+", 
+    RowBox[{"172", "y"}], "-", "44"}], "=", 
+   RowBox[{"0", " ", "are", " ", "n0t", " ", 
+    RowBox[{"pern", ".", " ", "to"}], " ", "eac", " ", "h", "  ", "ot", " ", 
+    "each", " ", 
+    RowBox[{"other", ".", " ", "So"}], " ", "we", " ", "introduce", " ", "a", 
+    " ", "constant"}]}]}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.651623876918571*^9, 3.6516239380706787`*^9}, {
+   3.6516239767119465`*^9, 3.651624025571232*^9}, {3.651624055601285*^9, 
+   3.6516241540062575`*^9}, {3.6516242142379637`*^9, 3.6516244341515493`*^9}, 
+   3.6516244801092305`*^9, {3.651624557438566*^9, 3.6516245700745883`*^9}, {
+   3.6516246065318527`*^9, 3.6516249447248464`*^9}, {3.65162502065018*^9, 
+   3.651625102706324*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"\[DoubledGamma]", " ", "in", " ", "eqn", 
+  RowBox[{"(", "1", ")"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"4", "x"}], "-", 
+     RowBox[{"3", "y"}], "+", "\[DoubledGamma]"}], ")"}], "2"], "=", 
+  RowBox[{
+   RowBox[{"104", "x"}], "+", 
+   RowBox[{"172", "y"}], "-", "44", "+", 
+   SuperscriptBox["\[DoubledGamma]", "2"], "+", 
+   RowBox[{"8", "\[DoubledGamma]x"}], "-", 
+   RowBox[{"6", "\[DoubledGamma]y"}]}]}]}], "Input",
+ CellChangeTimes->{{3.651625251514985*^9, 3.651625292870658*^9}, {
+  3.6516253728675985`*^9, 3.651625600939999*^9}, {3.6516257908091326`*^9, 
+  3.6516258785124865`*^9}, {3.651625975497857*^9, 3.651625990349083*^9}, {
+  3.651626053903595*^9, 3.651626074433231*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"4", "x"}], "-", 
+     RowBox[{"3", "y"}], "+", "\[DoubledGamma]"}], ")"}], "2"], "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"104", "+", 
+      RowBox[{"8", "\[DoubledGamma]"}]}], ")"}], "x"}], "+", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"172", "-", 
+      RowBox[{"6", "\[DoubledGamma]"}]}], ")"}], "y"}], "+", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["\[DoubledGamma]", "2"], "-", "44"}], ")"}], "--"}], 
+     "--"}], 
+    RowBox[{"(", "3", ")"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"4", "x"}], "-", 
+    RowBox[{"3", "y"}], "+", "\[DoubledGamma]"}], ")"}], "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"0", " ", "and", 
+     RowBox[{"(", 
+      RowBox[{"104", "+", 
+       RowBox[{"8", "\[DoubledGamma]"}]}], ")"}], "x"}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"172", "-", 
+       RowBox[{"6", "\[DoubledGamma]"}]}], ")"}], "y"}], "+", 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["\[DoubledGamma]", "2"], "-", "44"}], ")"}]}], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"0", " ", "will", " ", "be", " ", 
+      RowBox[{"pern", ".", " ", "to"}], " ", "each", " ", "other", " ", "if", 
+      " ", "4.", 
+      RowBox[{"(", 
+       RowBox[{"104", "+", 
+        RowBox[{"8", "\[DoubledGamma]"}]}], ")"}]}], "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"-", "3"}], ")"}], 
+      RowBox[{"(", 
+       RowBox[{"172", "-", 
+        RowBox[{"6", "\[DoubledGamma]"}]}], ")"}]}]}], "=", 
+    "0"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"4", "*", 
+      RowBox[{"(", 
+       RowBox[{"104", "+", 
+        RowBox[{"8", "*", "\[DoubledGamma]"}]}], ")"}]}], "-", 
+     RowBox[{"3", "*", 
+      RowBox[{"(", 
+       RowBox[{"172", "-", 
+        RowBox[{"6", "*", "\[DoubledGamma]"}]}], ")"}]}]}], "\[Equal]", "0"}],
+    ",", "\[DoubledGamma]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"out", ":", 
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{"\[DoubledGamma]", "\[Rule]", "2"}], "}"}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Subtituting", " ", "for", " ", "\[DoubledGamma]"}], "=", "2"}], 
+  ",", " ", 
+  RowBox[{"the", " ", 
+   RowBox[{"eqn", ".", 
+    RowBox[{"(", "3", ")"}]}], " ", "becomes"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"4", "x"}], "-", 
+     RowBox[{"3", "y"}], "+", "2"}], ")"}], "2"], "=", 
+  RowBox[{
+   RowBox[{"120", "x"}], "+", 
+   RowBox[{"160", "y"}], "-", "40"}]}], "\[IndentingNewLine]", 
+ RowBox[{"or", ",", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"4", "x"}], "-", 
+      RowBox[{"3", "y"}], "+", "2"}], ")"}], "2"], "=", 
+   RowBox[{"40", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"3", "x"}], "+", 
+      RowBox[{"4", "y"}], "-", "1"}], ")"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"{", 
+     FractionBox[
+      RowBox[{
+       RowBox[{"4", "x"}], "-", 
+       RowBox[{"3", "y"}], "+", "2"}], 
+      SqrtBox[
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", "4", ")"}], "^", "2"}], "+", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"-", "3"}], ")"}], "2"]}]]], "}"}], "2"], ".25"}], "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"40.", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"3", "x"}], "+", 
+       RowBox[{"4", "y"}], "-", "1"}], ")"}]}], 
+    SqrtBox[
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", "4", ")"}], "^", "2"}], "+", 
+      SuperscriptBox[
+       RowBox[{"(", "3", ")"}], "2"]}]]], ".5"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Let", " ", "Y"}], "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"4", "x"}], "-", 
+      RowBox[{"3", "y"}], "+", "2"}], ")"}], "/", "5"}]}], ",", " ", 
+  RowBox[{"X", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"3", "x"}], "+", 
+      RowBox[{"4", "y"}], "-", "1"}], ")"}], "/", "5"}]}], ",", " ", 
+  RowBox[{
+   RowBox[{"the", " ", 
+    RowBox[{"eqn", ".", " ", "takes"}], " ", "the", " ", "form", " ", 
+    SuperscriptBox["y", "2"]}], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"4.2", ".", "x"}], "..."}], 
+    RowBox[{"(", "5", ")"}], " ", "which", " ", "is", " ", "the", " ", 
+    "standard", " ", "form", " ", "of", " ", "the", " ", 
+    "parabola"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", "i", ")"}], " ", 
+    RowBox[{"Vertex", ":", "X"}]}], "=", "0"}], ",", 
+  RowBox[{"Y", "=", "0"}], ",", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"eq1", "=", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"4", " ", "x"}], "-", 
+      RowBox[{"3", "  ", "y"}], "+", "2"}], "5"]}], " ", 
+   ";"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"eq2", "=", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"3", "x"}], "+", 
+     RowBox[{"4", " ", "y"}], "-", " ", "1"}], 
+    RowBox[{"  ", "5"}]]}], " ", ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Slove", "[", " ", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"eq1", "\[Equal]", "0"}], ",", 
+     RowBox[{"eq2", "\[Equal]", "0"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}]}], " ", "]"}]}], "Input",
+ CellChangeTimes->{{3.65162619924905*^9, 3.6516262335691104`*^9}, {
+   3.6516262833019977`*^9, 3.651626451407893*^9}, {3.6516265911997385`*^9, 
+   3.651626641447427*^9}, {3.6516266854863043`*^9, 3.651626740819601*^9}, {
+   3.6516267785404673`*^9, 3.6516268793946447`*^9}, 3.651627063942969*^9, {
+   3.65162711025945*^9, 3.6516271684943523`*^9}, {3.651627206449219*^9, 
+   3.6516273152906103`*^9}, 3.651627510025752*^9, {3.652609232423157*^9, 
+   3.6526092410031724`*^9}, {3.6526097058815885`*^9, 3.652609735974041*^9}, {
+   3.652609850181842*^9, 3.652609893659118*^9}, {3.6526099935148935`*^9, 
+   3.652610135943144*^9}, {3.6526101839288282`*^9, 3.652610298495429*^9}, {
+   3.652610343751109*^9, 3.6526104164628363`*^9}, {3.6526104756649404`*^9, 
+   3.652610506724595*^9}, {3.6526105549286795`*^9, 3.6526107880398893`*^9}, {
+   3.65261083969158*^9, 3.6526110136318855`*^9}, {3.6526229020385866`*^9, 
+   3.6526229329266405`*^9}, {3.6526229652966976`*^9, 3.652622997900755*^9}, {
+   3.6526230319868145`*^9, 3.652623181965478*^9}, {3.652623216753539*^9, 
+   3.6526232176739407`*^9}, 3.6526232992928843`*^9, {3.6526233440961633`*^9, 
+   3.6526235634169483`*^9}, {3.6526236264098587`*^9, 3.652623728044038*^9}, {
+   3.6526237636120996`*^9, 3.6526241567639904`*^9}, {3.6526244322136745`*^9, 
+   3.652624445146097*^9}, {3.6526246605988755`*^9, 3.6526246924697313`*^9}, {
+   3.6526532538273015`*^9, 3.652653405958769*^9}, {3.6532733405339127`*^9, 
+   3.6532733695187635`*^9}, {3.6532737246689873`*^9, 3.653273749613431*^9}},
+ EmphasizeSyntaxErrors->True],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(Plus\\)\[NoBreak] in \
+\[NoBreak]\\!\\(\\(\\(-44\\)\\) + \[DoubledGamma]\\^2\\)\[NoBreak] is \
+Protected. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/write\\\", ButtonNote -> \
+\\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.652624642440444*^9, 3.6526246957301373`*^9, 
+  3.652653337225048*^9, 3.6526534172531886`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(Decrement\\)\[NoBreak] in \
+\[NoBreak]\\!\\(\\(\\((\[DoubledGamma]\\^2 - 44)\\)\\) --\\)\[NoBreak] is \
+Protected. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/write\\\", ButtonNote -> \
+\\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.652624642440444*^9, 3.6526246957301373`*^9, 
+  3.652653337225048*^9, 3.652653417315589*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(Power\\)\[NoBreak] in \[NoBreak]\\!\\(\
+\\((\\(\\(4\\\\ x\\)\\) - \\(\\(3\\\\ y\\)\\) + \[DoubledGamma])\\)\\^2\\)\
+\[NoBreak] is Protected. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/write\\\", ButtonNote -> \
+\\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.652624642440444*^9, 3.6526246957301373`*^9, 
+  3.652653337225048*^9, 3.652653417377989*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Set :: \
+write\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.652624642440444*^9, 3.6526246957301373`*^9, 
+  3.652653337225048*^9, 3.6526534174247885`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"y", " ", 
+   RowBox[{"(", 
+    RowBox[{"172", "-", 
+     RowBox[{"6", " ", "\[DoubledGamma]"}]}], ")"}]}], "+", 
+  RowBox[{"x", " ", 
+   RowBox[{"(", 
+    RowBox[{"104", "+", 
+     RowBox[{"8", " ", "\[DoubledGamma]"}]}], ")"}]}], "+", 
+  RowBox[{"3", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "44"}], "+", 
+     SuperscriptBox["\[DoubledGamma]", "2"]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{3.6526241713968163`*^9, 3.652624642440444*^9, 
+  3.652624695745737*^9, 3.6526533375370483`*^9, 3.6526534174247885`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(Plus\\)\[NoBreak] in \
+\[NoBreak]\\!\\(\\(\\(0.` \[VeryThinSpace]\\)\\) - \\(\\(3\\\\ \\(\\((172 - \
+\\(\\(6\\\\ \[DoubledGamma]\\)\\))\\)\\)\\)\\)\\)\[NoBreak] is Protected. \\!\
+\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/write\\\", \
+ButtonNote -> \\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.652624642440444*^9, 3.6526246957301373`*^9, 
+  3.652653337225048*^9, 3.652653417533989*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(Plus\\)\[NoBreak] in \[NoBreak]\\!\\(0 \
++ \\(\\(y\\\\ \\(\\((172 - \\(\\(6\\\\ \[DoubledGamma]\\)\\))\\)\\)\\)\\) + \
+\\(\\((\\(\\(-44\\)\\) + \[DoubledGamma]\\^2)\\)\\)\\)\[NoBreak] is \
+Protected. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/write\\\", ButtonNote -> \
+\\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.652624642440444*^9, 3.6526246957301373`*^9, 
+  3.652653337225048*^9, 3.652653417611989*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(Plus\\)\[NoBreak] in \
+\[NoBreak]\\!\\(\\(\\(4\\\\ x\\)\\) - \\(\\(3\\\\ y\\)\\) + \
+\[DoubledGamma]\\)\[NoBreak] is Protected. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/write\\\", ButtonNote -> \
+\\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.652624642440444*^9, 3.6526246957301373`*^9, 
+  3.652653337225048*^9, 3.6526534177055893`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Set :: \
+write\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.652624642440444*^9, 3.6526246957301373`*^9, 
+  3.652653337225048*^9, 3.65265341775239*^9}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.6526241713968163`*^9, 3.652624642440444*^9, 
+  3.652624695745737*^9, 3.6526533375370483`*^9, 3.65265341775239*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"\[DoubledGamma]", "\[Rule]", "2"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.6526241713968163`*^9, 3.652624642440444*^9, 
+  3.652624695745737*^9, 3.6526533375370483`*^9, 3.6526534177679896`*^9}],
+
+Cell[BoxData[
+ RowBox[{"out", ":", 
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{"\[DoubledGamma]", "\[Rule]", "2"}], "}"}], "}"}]}]], "Output",
+ CellChangeTimes->{3.6526241713968163`*^9, 3.652624642440444*^9, 
+  3.652624695745737*^9, 3.6526533375370483`*^9, 3.6526534177679896`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Set :: \
+write\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.6526095996522017`*^9, {3.6526111433617134`*^9, 3.652611146682519*^9}, 
+   3.6526241717868166`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(Plus\\)\[NoBreak] in \
+\[NoBreak]\\!\\(\\(\\(4\\\\ x\\)\\) - \\(\\(3\\\\ y\\)\\) + \
+\[DoubledGamma]\\)\[NoBreak] is Protected. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/write\\\", ButtonNote -> \
+\\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.6526095996522017`*^9, {3.6526111433617134`*^9, 3.652611146682519*^9}, 
+   3.6526241717088165`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(Plus\\)\[NoBreak] in \[NoBreak]\\!\\(0 \
++ \\(\\(y\\\\ \\(\\((172 - \\(\\(6\\\\ \[DoubledGamma]\\)\\))\\)\\)\\)\\) + \
+\\(\\((\\(\\(-44\\)\\) + \[DoubledGamma]\\^2)\\)\\)\\)\[NoBreak] is \
+Protected. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/write\\\", ButtonNote -> \
+\\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.6526095996522017`*^9, {3.6526111433617134`*^9, 3.652611146682519*^9}, 
+   3.6526241715996165`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(Plus\\)\[NoBreak] in \
+\[NoBreak]\\!\\(\\(\\(0.` \[VeryThinSpace]\\)\\) - \\(\\(3\\\\ \\(\\((172 - \
+\\(\\(6\\\\ \[DoubledGamma]\\)\\))\\)\\)\\)\\)\\)\[NoBreak] is Protected. \\!\
+\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/write\\\", \
+ButtonNote -> \\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.6526095996522017`*^9, {3.6526111433617134`*^9, 3.652611146682519*^9}, 
+   3.6526241714904165`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Set :: \
+write\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.6526095996522017`*^9, {3.6526111433617134`*^9, 3.652611146682519*^9}, 
+   3.6526241713968163`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(Power\\)\[NoBreak] in \[NoBreak]\\!\\(\
+\\((\\(\\(4\\\\ x\\)\\) - \\(\\(3\\\\ y\\)\\) + \[DoubledGamma])\\)\\^2\\)\
+\[NoBreak] is Protected. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/write\\\", ButtonNote -> \
+\\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.6526095996522017`*^9, {3.6526111433617134`*^9, 3.652611146682519*^9}, 
+   3.652624171334416*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(Decrement\\)\[NoBreak] in \
+\[NoBreak]\\!\\(\\(\\((\[DoubledGamma]\\^2 - 44)\\)\\) --\\)\[NoBreak] is \
+Protected. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/write\\\", ButtonNote -> \
+\\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.6526095996522017`*^9, {3.6526111433617134`*^9, 3.652611146682519*^9}, 
+   3.652624171240816*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(Plus\\)\[NoBreak] in \
+\[NoBreak]\\!\\(\\(\\(-44\\)\\) + \[DoubledGamma]\\^2\\)\[NoBreak] is \
+Protected. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/write\\\", ButtonNote -> \
+\\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.6526095996522017`*^9, {3.6526111433617134`*^9, 3.652611146682519*^9}, 
+   3.6526241711316156`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], ":", 
+  " ", "\<\"Tag \[NoBreak]\\!\\(Plus\\)\[NoBreak] in \
+\[NoBreak]\\!\\(\\(\\(-44\\)\\) + \[DoubledGamma]\\^2\\)\[NoBreak] is \
+Protected. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/write\\\", ButtonNote -> \
+\\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.6526095996522017`*^9, {3.6526111433617134`*^9, 3.652611146682519*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], ":", 
+  " ", "\<\"Tag \[NoBreak]\\!\\(Decrement\\)\[NoBreak] in \[NoBreak]\\!\\(\\(\
+\\((\[DoubledGamma]\\^2 - 44)\\)\\) --\\)\[NoBreak] is Protected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/write\\\", \
+ButtonNote -> \\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.6526095997458024`*^9, 3.6526111559817348`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], ":", 
+  " ", "\<\"Tag \[NoBreak]\\!\\(Power\\)\[NoBreak] in \[NoBreak]\\!\\(\\((\\(\
+\\(4\\\\ x\\)\\) - \\(\\(3\\\\ y\\)\\) + \[DoubledGamma])\\)\\^2\\)\[NoBreak] \
+is Protected. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/write\\\", ButtonNote -> \
+\\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6526095998238025`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], ":", 
+  " ", "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Set :: write\\), \
+\\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.652609599886203*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"y", " ", 
+   RowBox[{"(", 
+    RowBox[{"172", "-", 
+     RowBox[{"6", " ", "\[DoubledGamma]"}]}], ")"}]}], "+", 
+  RowBox[{"x", " ", 
+   RowBox[{"(", 
+    RowBox[{"104", "+", 
+     RowBox[{"8", " ", "\[DoubledGamma]"}]}], ")"}]}], "+", 
+  RowBox[{"3", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "44"}], "+", 
+     SuperscriptBox["\[DoubledGamma]", "2"]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{3.652609599886203*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], ":", 
+  " ", "\<\"Tag \[NoBreak]\\!\\(Plus\\)\[NoBreak] in \
+\[NoBreak]\\!\\(\\(\\(0.` \[VeryThinSpace]\\)\\) - \\(\\(3\\\\ \\(\\((172 - \
+\\(\\(6\\\\ \[DoubledGamma]\\)\\))\\)\\)\\)\\)\\)\[NoBreak] is Protected. \\!\
+\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/write\\\", \
+ButtonNote -> \\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.652609599979803*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], ":", 
+  " ", "\<\"Tag \[NoBreak]\\!\\(Plus\\)\[NoBreak] in \[NoBreak]\\!\\(0 + \
+\\(\\(y\\\\ \\(\\((172 - \\(\\(6\\\\ \[DoubledGamma]\\)\\))\\)\\)\\)\\) + \\(\
+\\((\\(\\(-44\\)\\) + \[DoubledGamma]\\^2)\\)\\)\\)\[NoBreak] is Protected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/write\\\", \
+ButtonNote -> \\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.652609600073403*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], ":", 
+  " ", "\<\"Tag \[NoBreak]\\!\\(Plus\\)\[NoBreak] in \
+\[NoBreak]\\!\\(\\(\\(4\\\\ x\\)\\) - \\(\\(3\\\\ y\\)\\) + \
+\[DoubledGamma]\\)\[NoBreak] is Protected. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/write\\\", ButtonNote -> \
+\\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6526096001670027`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], ":", 
+  " ", "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Set :: write\\), \
+\\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6526096002138033`*^9}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.6526096002138033`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"\[DoubledGamma]", "\[Rule]", "2"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.6526096002138033`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.652609584878976*^9, 3.652609586548179*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], ":", 
+  " ", "\<\"Tag \[NoBreak]\\!\\(Plus\\)\[NoBreak] in \
+\[NoBreak]\\!\\(\\(\\(-44\\)\\) + \[DoubledGamma]\\^2\\)\[NoBreak] is \
+Protected. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/write\\\", ButtonNote -> \
+\\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.651627344665462*^9, 3.651627538386602*^9, 
+  3.652609266056816*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], ":", 
+  " ", "\<\"Tag \[NoBreak]\\!\\(Decrement\\)\[NoBreak] in \[NoBreak]\\!\\(\\(\
+\\((\[DoubledGamma]\\^2 - 44)\\)\\) --\\)\[NoBreak] is Protected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/write\\\", \
+ButtonNote -> \\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.651627344665462*^9, 3.651627538386602*^9, 
+  3.6526092661504164`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], ":", 
+  " ", "\<\"Tag \[NoBreak]\\!\\(Power\\)\[NoBreak] in \[NoBreak]\\!\\(\\((\\(\
+\\(4\\\\ x\\)\\) - \\(\\(3\\\\ y\\)\\) + \[DoubledGamma])\\)\\^2\\)\[NoBreak] \
+is Protected. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/write\\\", ButtonNote -> \
+\\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.651627344665462*^9, 3.651627538386602*^9, 
+  3.6526092662284164`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], ":", 
+  " ", "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Set :: write\\), \
+\\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.651627344665462*^9, 3.651627538386602*^9, 
+  3.652609266290817*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"y", " ", 
+   RowBox[{"(", 
+    RowBox[{"172", "-", 
+     RowBox[{"6", " ", "\[DoubledGamma]"}]}], ")"}]}], "+", 
+  RowBox[{"x", " ", 
+   RowBox[{"(", 
+    RowBox[{"104", "+", 
+     RowBox[{"8", " ", "\[DoubledGamma]"}]}], ")"}]}], "+", 
+  RowBox[{"3", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "44"}], "+", 
+     SuperscriptBox["\[DoubledGamma]", "2"]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{3.651627344852662*^9, 3.6516275386050024`*^9, 
+  3.6526092663220167`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], ":", 
+  " ", "\<\"Tag \[NoBreak]\\!\\(Plus\\)\[NoBreak] in \
+\[NoBreak]\\!\\(\\(\\(0.` \[VeryThinSpace]\\)\\) - \\(\\(3\\\\ \\(\\((172 - \
+\\(\\(6\\\\ \[DoubledGamma]\\)\\))\\)\\)\\)\\)\\)\[NoBreak] is Protected. \\!\
+\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/write\\\", \
+ButtonNote -> \\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.651627344665462*^9, 3.651627538386602*^9, 
+  3.652609266431217*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], ":", 
+  " ", "\<\"Tag \[NoBreak]\\!\\(Plus\\)\[NoBreak] in \[NoBreak]\\!\\(0 + \
+\\(\\(y\\\\ \\(\\((172 - \\(\\(6\\\\ \[DoubledGamma]\\)\\))\\)\\)\\)\\) + \\(\
+\\((\\(\\(-44\\)\\) + \[DoubledGamma]\\^2)\\)\\)\\)\[NoBreak] is Protected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/write\\\", \
+ButtonNote -> \\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.651627344665462*^9, 3.651627538386602*^9, 
+  3.6526092665092173`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], ":", 
+  " ", "\<\"Tag \[NoBreak]\\!\\(Plus\\)\[NoBreak] in \
+\[NoBreak]\\!\\(\\(\\(4\\\\ x\\)\\) - \\(\\(3\\\\ y\\)\\) + \
+\[DoubledGamma]\\)\[NoBreak] is Protected. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/write\\\", ButtonNote -> \
+\\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.651627344665462*^9, 3.651627538386602*^9, 
+  3.652609266571617*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], ":", 
+  " ", "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Set :: write\\), \
+\\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.651627344665462*^9, 3.651627538386602*^9, 
+  3.6526092666184173`*^9}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.651627344852662*^9, 3.6516275386050024`*^9, 
+  3.6526092666184173`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"\[DoubledGamma]", "\[Rule]", "2"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.651627344852662*^9, 3.6516275386050024`*^9, 
+  3.6526092666340175`*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.651626917318311*^9, 3.6516269322319374`*^9}, 
+   3.6516270421965303`*^9, {3.6516270921790185`*^9, 3.65162709320862*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.6516255211770587`*^9, {3.6516269580655828`*^9, 3.6516269580811825`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.65261117028016*^9}]
+},
+WindowSize->{1024, 686},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>2. Inherited,
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 120, 2, 57, "Input"],
+Cell[681, 24, 268, 6, 57, "Input"],
+Cell[CellGroupData[{
+Cell[974, 34, 1262, 31, 126, "Input"],
+Cell[2239, 67, 169, 3, 57, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2445, 75, 161, 4, 57, "Input"],
+Cell[2609, 81, 70, 1, 57, "Output"]
+}, Open  ]],
+Cell[2694, 85, 1649, 42, 301, "Input"],
+Cell[4346, 129, 773, 18, 94, "Input"],
+Cell[CellGroupData[{
+Cell[5144, 151, 6899, 203, 758, "Input"],
+Cell[12046, 356, 573, 12, 46, "Message"],
+Cell[12622, 370, 580, 12, 49, "Message"],
+Cell[13205, 384, 606, 12, 46, "Message"],
+Cell[13814, 398, 600, 12, 46, "Message"],
+Cell[14417, 412, 562, 16, 63, "Output"],
+Cell[14982, 430, 640, 12, 46, "Message"],
+Cell[15625, 444, 665, 13, 49, "Message"],
+Cell[16293, 459, 595, 12, 46, "Message"],
+Cell[16891, 473, 597, 12, 46, "Message"],
+Cell[17491, 487, 164, 2, 57, "Output"],
+Cell[17658, 491, 256, 5, 57, "Output"],
+Cell[17917, 498, 283, 6, 57, "Output"],
+Cell[18203, 506, 658, 15, 46, "Message"],
+Cell[18864, 523, 653, 15, 46, "Message"],
+Cell[19520, 540, 725, 16, 49, "Message"],
+Cell[20248, 558, 700, 15, 46, "Message"],
+Cell[20951, 575, 658, 15, 92, "Message"],
+Cell[21612, 592, 664, 15, 92, "Message"],
+Cell[22279, 609, 638, 15, 98, "Message"],
+Cell[22920, 626, 631, 15, 92, "Message"],
+Cell[23554, 643, 590, 13, 92, "Message"],
+Cell[24147, 658, 570, 11, 98, "Message"],
+Cell[24720, 671, 524, 10, 92, "Message"],
+Cell[25247, 683, 512, 9, 92, "Message"],
+Cell[25762, 694, 465, 15, 126, "Output"],
+Cell[26230, 711, 556, 10, 184, "Message"],
+Cell[26789, 723, 579, 10, 196, "Message"],
+Cell[27371, 735, 511, 10, 184, "Message"],
+Cell[27885, 747, 514, 9, 184, "Message"],
+Cell[28402, 758, 72, 1, 228, "Output"],
+Cell[28477, 761, 161, 4, 228, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28675, 770, 92, 1, 228, "Input"],
+Cell[28770, 773, 534, 11, 184, "Message"],
+Cell[29307, 786, 543, 10, 196, "Message"],
+Cell[29853, 798, 571, 11, 368, "Message"],
+Cell[30427, 811, 559, 10, 368, "Message"],
+Cell[30989, 823, 516, 16, 504, "Output"],
+Cell[31508, 841, 603, 11, 368, "Message"],
+Cell[32114, 854, 628, 11, 392, "Message"],
+Cell[32745, 867, 556, 11, 368, "Message"],
+Cell[33304, 880, 561, 10, 368, "Message"],
+Cell[33868, 892, 121, 2, 456, "Output"],
+Cell[33992, 896, 210, 5, 456, "Output"]
+}, Open  ]],
+Cell[34217, 904, 169, 2, 456, "Input"],
+Cell[34389, 908, 123, 2, 456, "Input"],
+Cell[34515, 912, 67, 1, 456, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

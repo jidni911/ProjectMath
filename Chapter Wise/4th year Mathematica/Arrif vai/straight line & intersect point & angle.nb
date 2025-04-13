@@ -1,0 +1,183 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5557,        174]
+NotebookOptionsPosition[      4996,        149]
+NotebookOutlinePosition[      5367,        165]
+CellTagsIndexPosition[      5324,        162]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"a", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"b", "=", 
+   RowBox[{"-", "1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"c", "=", "k"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"f", "=", 
+   RowBox[{
+    RowBox[{"-", "5"}], "/", "2"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"g", "=", 
+   RowBox[{"-", "1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"h", "=", 
+   RowBox[{"1", "/", "2"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"d", "=", 
+   RowBox[{
+    RowBox[{"a", "*", "b", "*", "c"}], "+", 
+    RowBox[{"2", "*", "f", "*", "g", "*", "h"}], "-", 
+    RowBox[{"a", "*", 
+     SuperscriptBox["f", "2"]}], "-", 
+    RowBox[{"b", "*", 
+     SuperscriptBox["g", "2"]}], "-", 
+    RowBox[{"c", "*", 
+     SuperscriptBox["h", "2"]}]}]}], ";", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{"d", "\[Equal]", "0"}], ",", "k"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.824729376171139*^9, 3.824729536821347*^9}, 
+   3.8247299889154444`*^9, {3.824730524584098*^9, 3.8247305403612046`*^9}, {
+   3.8247306487298017`*^9, 3.8247306589464364`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"k", "\[Rule]", 
+    RowBox[{"-", "4"}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{{3.824729516122967*^9, 3.824729537367659*^9}, 
+   3.8247295917936*^9, {3.8247304439818535`*^9, 3.824730460493582*^9}, {
+   3.824730541626522*^9, 3.8247305570448027`*^9}, {3.824730598878684*^9, 
+   3.82473061309409*^9}, 3.8247306617111297`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<point of intersection is (\>\"", ",", 
+    RowBox[{"x", "=", 
+     FractionBox[
+      RowBox[{
+       RowBox[{"h", "*", "f"}], "-", 
+       RowBox[{"b", "*", "g"}]}], 
+      RowBox[{
+       RowBox[{"a", "*", "b"}], "-", 
+       SuperscriptBox["h", "2"]}]]}], ",", "\"\<,\>\"", ",", 
+    RowBox[{"y", "=", 
+     FractionBox[
+      RowBox[{
+       RowBox[{"g", "*", "h"}], "-", 
+       RowBox[{"a", "*", "f"}]}], 
+      RowBox[{
+       RowBox[{"a", "*", "b"}], "-", 
+       SuperscriptBox["h", "2"]}]]}], ",", "\"\<)\>\""}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.824729602744588*^9, 3.824729607274676*^9}, {
+  3.8247296665552034`*^9, 3.8247297193276243`*^9}, {3.824729783030955*^9, 
+  3.824729937160601*^9}, {3.824730488705696*^9, 3.8247305106186357`*^9}, {
+  3.824730592099037*^9, 3.824730593005501*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"point of intersection is (\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "2"}], "\[InvisibleSpace]", "\<\")\"\>"}],
+  SequenceForm["point of intersection is (", 1, ",", -2, ")"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8247299150720453`*^9, 3.8247299378479385`*^9}, 
+   3.824730450292856*^9, {3.8247305497808557`*^9, 3.8247305615280933`*^9}, {
+   3.824730603112095*^9, 3.824730618186674*^9}, {3.824730666444404*^9, 
+   3.8247306713182383`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"If", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"a", "+", "b"}], "\[Equal]", "0"}], ",", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<the angle between the lines is \[Theta]=\>\"", ",", 
+     RowBox[{"Pi", "/", "2"}]}], "]"}], ",", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<the angle between the lines is \[Theta]=\>\"", ",", 
+     RowBox[{
+      RowBox[{"ArcTan", "[", 
+       FractionBox[
+        RowBox[{"2", 
+         SqrtBox[
+          RowBox[{"-", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"a", "*", "b"}], "-", 
+             SuperscriptBox["h", "2"]}], ")"}]}]]}], 
+        RowBox[{"a", "+", "b"}]], "]"}], "//", "N"}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8247307864211836`*^9, 3.8247309567382355`*^9}, {
+  3.824731005257635*^9, 3.824731094689761*^9}, {3.8247311315386415`*^9, 
+  3.8247311349753313`*^9}, {3.8247311693913813`*^9, 3.824731198941749*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"the angle between the lines is \[Theta]=\"\>", 
+   "\[InvisibleSpace]", "1.2490457723982544`"}],
+  SequenceForm[
+  "the angle between the lines is \[Theta]=", 1.2490457723982544`],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.8247310952989593`*^9, 3.824731136021552*^9, {3.8247311708905845`*^9, 
+   3.8247311995201206`*^9}}]
+}, Open  ]]
+},
+WindowSize->{767, 601},
+WindowMargins->{{Automatic, 291}, {24, Automatic}},
+Magnification:>2. Inherited,
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1162, 34, 367, "Input"],
+Cell[1745, 58, 386, 8, 84, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2168, 71, 894, 23, 256, "Input"],
+Cell[3065, 96, 567, 10, 43, "Print"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3669, 111, 926, 24, 465, "Input"],
+Cell[4598, 137, 382, 9, 43, "Print"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

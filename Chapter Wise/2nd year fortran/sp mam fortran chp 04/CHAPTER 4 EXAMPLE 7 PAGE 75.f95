@@ -1,0 +1,12 @@
+!==PROGRAM TO FIND THE SUM OF THE SERIES
+    PROGRAM SUMMATION
+    PRINT*,"ENTER X AND K"
+    READ(*,*)X,K
+      SUM=1.0
+      DO J=1,K
+        SUM=SUM+X**J
+        ENDDO
+        WRITE(6,20)SUM
+  20   FORMAT(2X,"SUM=",F10.4)
+       END PROGRAM
+       

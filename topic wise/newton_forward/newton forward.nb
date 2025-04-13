@@ -1,0 +1,224 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6900,        215]
+NotebookOptionsPosition[      6479,        196]
+NotebookOutlinePosition[      6849,        212]
+CellTagsIndexPosition[      6806,        209]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"n", "=", " ", 
+   RowBox[{"Input", "[", "\"\<Enter number of point\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "1"}], ",", 
+    RowBox[{"i", "\[LessEqual]", "n"}], ",", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"x", "[", "i", "]"}], "=", 
+       RowBox[{"Input", "[", "\"\<enter x value\>\"", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"d", "[", 
+        RowBox[{"i", ",", "0"}], "]"}], "=", 
+       RowBox[{"Input", "[", "\"\<enter y value\>\"", "]"}]}], ";"}], "}"}]}],
+    "\[IndentingNewLine]", "    ", "\[IndentingNewLine]", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"j", "=", "1"}], ",", 
+    RowBox[{"j", "\[LessEqual]", 
+     RowBox[{"n", "-", "1"}]}], ",", 
+    RowBox[{"j", "++"}], ",", 
+    RowBox[{"For", "[", 
+     RowBox[{
+      RowBox[{"i", "=", "1"}], ",", 
+      RowBox[{"i", "\[LessEqual]", 
+       RowBox[{"n", "-", "j"}]}], ",", 
+      RowBox[{"i", "++"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"d", "[", 
+         RowBox[{"i", ",", "j"}], "]"}], "=", 
+        RowBox[{
+         RowBox[{"d", "[", 
+          RowBox[{
+           RowBox[{"i", "+", "1"}], ",", 
+           RowBox[{"j", "-", "1"}]}], "]"}], "-", 
+         RowBox[{"d", "[", 
+          RowBox[{"i", ",", 
+           RowBox[{"j", "-", "1"}]}], "]"}]}]}], ";"}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", "\"\<Forward Difference Table\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"s", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"d", "[", 
+      RowBox[{"i", ",", "j"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "n"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"j", ",", "0", ",", 
+       RowBox[{"n", "-", "i"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"TableForm", "[", "s", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"x1", "=", 
+   RowBox[{"Input", "[", "\"\<enter the point\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"h", "=", 
+   RowBox[{
+    RowBox[{"x", "[", "2", "]"}], "-", 
+    RowBox[{"x", "[", "1", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"p", "[", "1", "]"}], "=", 
+   FractionBox[
+    RowBox[{"x1", "-", 
+     RowBox[{"x", "[", "1", "]"}]}], "h"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "2"}], ",", 
+    RowBox[{"i", "\[LessEqual]", 
+     RowBox[{"n", "-", "1"}]}], ",", 
+    RowBox[{"i", "++"}], ",", 
+    RowBox[{
+     RowBox[{"p", "[", "i", "]"}], "=", 
+     RowBox[{
+      RowBox[{"p", "[", 
+       RowBox[{"i", "-", "1"}], "]"}], "*", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"p", "[", "1", "]"}], "-", "i", "+", "1"}], ")"}]}]}]}], 
+   "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sum1", "=", 
+   RowBox[{"d", "[", 
+    RowBox[{"1", ",", "0"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"For", "[", 
+    RowBox[{
+     RowBox[{"i", "=", "1"}], ",", 
+     RowBox[{"i", "\[LessEqual]", 
+      RowBox[{"n", "-", "1"}]}], ",", 
+     RowBox[{"i", "++"}], ",", 
+     RowBox[{
+      RowBox[{"sum1", "=", 
+       RowBox[{"sum1", "+", 
+        RowBox[{
+         RowBox[{"p", "[", "i", "]"}], "*", 
+         FractionBox[
+          RowBox[{"d", "[", 
+           RowBox[{"1", ",", "i"}], "]"}], 
+          RowBox[{"i", "!"}]]}]}]}], ";"}]}], " ", "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<the interpolating result =\>\"", ",", " ", 
+    RowBox[{"PaddedForm", "[", 
+     RowBox[{"sum1", ",", 
+      RowBox[{"{", 
+       RowBox[{"12", ",", "9"}], "}"}]}], "]"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8713400348744445`*^9, 3.8713401040449657`*^9}, {
+  3.8713402016075373`*^9, 3.8713402900128927`*^9}, {3.8713403211661477`*^9, 
+  3.8713409578812656`*^9}}],
+
+Cell[BoxData["\<\"Forward Difference Table\"\>"], "Print",
+ CellChangeTimes->{3.871341280614233*^9}],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {"9", "1.0600000000000005`", "0.129999999999999`", 
+     RowBox[{"-", "0.00999999999999801`"}], "0.01999999999999602`"},
+    {"10.06`", "1.1899999999999995`", "0.120000000000001`", 
+     "0.00999999999999801`", "\<\"\"\>"},
+    {"11.25`", "1.3100000000000005`", 
+     "0.129999999999999`", "\<\"\"\>", "\<\"\"\>"},
+    {"12.56`", "1.4399999999999995`", "\<\"\"\>", "\<\"\"\>", "\<\"\"\>"},
+    {"14", "\<\"\"\>", "\<\"\"\>", "\<\"\"\>", "\<\"\"\>"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  TableForm[{{
+    9, 1.0600000000000005`, 0.129999999999999, -0.00999999999999801, 
+     0.01999999999999602}, {10.06, 1.1899999999999995`, 0.120000000000001, 
+    0.00999999999999801}, {11.25, 1.3100000000000005`, 0.129999999999999}, {
+    12.56, 1.4399999999999995`}, {14}}]]], "Output",
+ CellChangeTimes->{3.871341280629833*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"the interpolating result =\"\>", "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"  10.521408000\"\>",
+     10.521408000000003`,
+     AutoDelete->True],
+    PaddedForm[#, {12, 9}]& ]}],
+  SequenceForm["the interpolating result =", 
+   PaddedForm[10.521408000000003`, {12, 9}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.871341287883846*^9}]
+}, Open  ]]
+},
+WindowSize->{1008, 686},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 4128, 127, 610, "Input"],
+Cell[4711, 151, 100, 1, 32, "Print"],
+Cell[4814, 154, 1237, 26, 160, "Output"],
+Cell[6054, 182, 409, 11, 32, "Print"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

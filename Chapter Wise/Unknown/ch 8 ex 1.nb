@@ -1,0 +1,202 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6614,        192]
+NotebookOptionsPosition[      6264,        175]
+NotebookOutlinePosition[      6604,        190]
+CellTagsIndexPosition[      6561,        187]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"a", "=", "1.0"}], ";", 
+    RowBox[{"b", "=", "2.0"}], ";", 
+    RowBox[{"i", "=", "1"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"i", "\[LessEqual]", "20"}], ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"d1", "[", "i", "]"}], "=", "a"}], ";", 
+    RowBox[{
+     RowBox[{"d2", "[", "i", "]"}], "=", "b"}], ";", 
+    RowBox[{"c", "=", 
+     FractionBox[
+      RowBox[{"a", "+", "b"}], "2"]}], ";", 
+    RowBox[{
+     RowBox[{"d3", "[", "i", "]"}], "=", "c"}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"f", "[", "x_", "]"}], "=", 
+     RowBox[{
+      SuperscriptBox["x", "3"], "+", 
+      RowBox[{"4", 
+       SuperscriptBox["x", "2"]}], "-", "10"}]}], ";", " ", 
+    RowBox[{"c1", "=", 
+     RowBox[{"f", "[", "c", "]"}]}], ";", 
+    RowBox[{
+     RowBox[{"d4", "[", "i", "]"}], "=", "c1"}], ";", 
+    RowBox[{"a1", "=", 
+     RowBox[{"f", "[", "a", "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"a1", "*", "c1"}], "<", "0"}], ",", 
+      RowBox[{"b", "=", "c"}], ",", 
+      RowBox[{
+       RowBox[{"a", "=", "c"}], ";", 
+       RowBox[{"a1", "=", "c1"}]}]}], "]"}], ";", 
+    RowBox[{"i", "++"}]}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"lst", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"i", ",", 
+       RowBox[{"d1", "[", "i", "]"}], ",", 
+       RowBox[{"d2", "[", "i", "]"}], ",", 
+       RowBox[{"d3", "[", "i", "]"}], ",", 
+       RowBox[{"d4", "[", "i", "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "20"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"TableForm", "[", 
+  RowBox[{"lst", ",", 
+   RowBox[{"TableHeadings", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"None", ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<iter\>\"", ",", "\"\<a\>\"", ",", "\"\<b\>\"", ",", "\"\<c\>\"", 
+        ",", "\"\<f(c)\>\""}], "}"}]}], "}"}]}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{
+  "\"\<One of the real root of the given equation is = \>\"", ",", "c"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.870138969584897*^9, 3.870138979085314*^9}, {
+  3.870139012909773*^9, 3.8701390392894197`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      TagBox["\<\"iter\"\>",
+       HoldForm], 
+      TagBox["\<\"a\"\>",
+       HoldForm], 
+      TagBox["\<\"b\"\>",
+       HoldForm], 
+      TagBox["\<\"c\"\>",
+       HoldForm], 
+      TagBox["\<\"f(c)\"\>",
+       HoldForm]},
+     {"1", "1.`", "2.`", "1.5`", "2.375`"},
+     {"2", "1.`", "1.5`", "1.25`", 
+      RowBox[{"-", "1.796875`"}]},
+     {"3", "1.25`", "1.5`", "1.375`", "0.162109375`"},
+     {"4", "1.25`", "1.375`", "1.3125`", 
+      RowBox[{"-", "0.848388671875`"}]},
+     {"5", "1.3125`", "1.375`", "1.34375`", 
+      RowBox[{"-", "0.350982666015625`"}]},
+     {"6", "1.34375`", "1.375`", "1.359375`", 
+      RowBox[{"-", "0.09640884399414062`"}]},
+     {"7", "1.359375`", "1.375`", "1.3671875`", "0.03235578536987305`"},
+     {"8", "1.359375`", "1.3671875`", "1.36328125`", 
+      RowBox[{"-", "0.03214997053146362`"}]},
+     {"9", "1.36328125`", "1.3671875`", "1.365234375`", 
+      "0.00007202476263046265`"},
+     {"10", "1.36328125`", "1.365234375`", "1.3642578125`", 
+      RowBox[{"-", "0.01604669075459242`"}]},
+     {"11", "1.3642578125`", "1.365234375`", "1.36474609375`", 
+      RowBox[{"-", "0.007989262812770903`"}]},
+     {"12", "1.36474609375`", "1.365234375`", "1.364990234375`", 
+      RowBox[{"-", "0.003959101522923447`"}]},
+     {"13", "1.364990234375`", "1.365234375`", "1.3651123046875`", 
+      RowBox[{"-", "0.0019436590100667672`"}]},
+     {"14", "1.3651123046875`", "1.365234375`", "1.36517333984375`", 
+      RowBox[{"-", "0.000935847281880342`"}]},
+     {"15", "1.36517333984375`", "1.365234375`", "1.365203857421875`", 
+      RowBox[{"-", "0.00043191879925075227`"}]},
+     {"16", "1.365203857421875`", "1.365234375`", "1.3652191162109375`", 
+      RowBox[{"-", "0.0001799489032272561`"}]},
+     {"17", "1.3652191162109375`", "1.365234375`", "1.3652267456054688`", 
+      RowBox[{"-", "0.00005396254152900681`"}]},
+     {"18", "1.3652267456054688`", "1.365234375`", "1.3652305603027344`", 
+      "9.030992742964372`*^-6"},
+     {"19", "1.3652267456054688`", "1.3652305603027344`", 
+      "1.3652286529541016`", 
+      RowBox[{"-", "0.000022465803844795573`"}]},
+     {"20", "1.3652286529541016`", "1.3652305603027344`", 
+      "1.365229606628418`", 
+      RowBox[{"-", "6.7174129139147`*^-6"}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxDividers->{
+     "Columns" -> {{False}}, "ColumnsIndexed" -> {}, 
+      "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[2.0999999999999996`]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   {None, OutputFormsDump`HeadedColumns}],
+  Function[BoxForm`e$, 
+   TableForm[
+   BoxForm`e$, 
+    TableHeadings -> {None, {"iter", "a", "b", "c", "f(c)"}}]]]], "Output",
+ CellChangeTimes->{3.8701390787106886`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"One of the real root of the given equation is = \"\>", 
+   "\[InvisibleSpace]", "1.365229606628418`"}],
+  SequenceForm[
+  "One of the real root of the given equation is = ", 1.365229606628418],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.870139078726289*^9}]
+}, Open  ]]
+},
+WindowSize->{1350, 631},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2276, 67, 184, "Input"],
+Cell[2859, 91, 3072, 72, 348, "Output"],
+Cell[5934, 165, 314, 7, 23, "Print"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

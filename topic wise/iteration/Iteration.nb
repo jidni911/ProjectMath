@@ -1,0 +1,244 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7281,        235]
+NotebookOptionsPosition[      6774,        214]
+NotebookOutlinePosition[      7147,        230]
+CellTagsIndexPosition[      7104,        227]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData["Exit"], "Input",
+ CellChangeTimes->{{3.7206573908124237`*^9, 3.7206574839913874`*^9}, {
+  3.720658220452281*^9, 3.7206582215754833`*^9}, {3.720834372500961*^9, 
+  3.7208344029522142`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"g", "[", "x_", "]"}], ":=", 
+   FractionBox[
+    SqrtBox[
+     RowBox[{"(", 
+      RowBox[{"10", "-", 
+       SuperscriptBox["x", "3"]}], ")"}]], "2"]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], ":=", 
+   RowBox[{
+    SuperscriptBox["x", "3"], "+", 
+    RowBox[{"4", "*", 
+     SuperscriptBox["x", "2"]}], "-", "10"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"s", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"Label", "[", "1", "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"a", "[", "0", "]"}], "=", 
+     RowBox[{"Input", "[", "\"\<Enter initial point\>\"", "]"}]}], ";", "\n", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Abs", "[", 
+        RowBox[{
+         RowBox[{"g", "'"}], "[", 
+         RowBox[{"a", "[", "0", "]"}], "]"}], "]"}], "\[GreaterEqual]", "1"}],
+       ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Print", "[", "\"\<Re-enter the intial point\>\"", "]"}], ";",
+         "\n", 
+        RowBox[{"s", "++"}], ";", "\n", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"s", "==", "3"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Break", "[", "]"}], ",", 
+            RowBox[{"Print", "[", "\"\<Error\>\"", "]"}]}], "}"}]}], "]"}], 
+        ";", "\n", 
+        RowBox[{"Goto", "[", "1", "]"}], ";"}], "\n", "}"}]}], "\n", "]"}], 
+    ";", "s"}], "\n", ")"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"n", "=", 
+   RowBox[{
+   "Input", "[", "\"\<Enter maximum number of iterations\>\"", "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"tol", "=", "0.00001"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"k", "=", "0"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "1"}], ",", 
+    RowBox[{"i", "\[LessEqual]", "n"}], ",", 
+    RowBox[{"i", "++"}], ",", 
+    RowBox[{"{", "\n", 
+     RowBox[{
+      RowBox[{"k", "++"}], ";", "\n", 
+      RowBox[{
+       RowBox[{"a", "[", "i", "]"}], "=", 
+       RowBox[{"g", "[", 
+        RowBox[{"a", "[", 
+         RowBox[{"i", "-", "1"}], "]"}], "]"}]}], ";", "\n", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Abs", "[", 
+          RowBox[{
+           RowBox[{"a", "[", "i", "]"}], "-", 
+           RowBox[{"a", "[", 
+            RowBox[{"i", "-", "1"}], "]"}]}], "]"}], "<", "tol"}], ",", 
+        RowBox[{
+         RowBox[{"Break", "[", "]"}], ";"}]}], "]"}]}], "\n", "}"}]}], "]"}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"st", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"i", ",", 
+       RowBox[{"a", "[", "i", "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "0", ",", "k"}], "}"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{"PaddedForm", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"TableForm", "[", "st", "]"}], "//", "N"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"13", ",", "9"}], "}"}]}], "]"}], "\n", 
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"n", "==", "k"}], ",", 
+    RowBox[{
+    "Print", "[", "\"\<Maximum number of iteration exceeded\>\"", "]"}]}], 
+   "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.720657487860194*^9, 3.7206576235336328`*^9}, {
+   3.720657667166109*^9, 3.720658178441407*^9}, 3.7206582463171268`*^9, {
+   3.7206584089630127`*^9, 3.720658419368231*^9}, {3.720834031640362*^9, 
+   3.720834046475988*^9}, {3.7208340848988557`*^9, 3.7208340863028584`*^9}, {
+   3.7208341707614064`*^9, 3.7208341891070385`*^9}, 3.720834291162418*^9, {
+   3.720834337244899*^9, 3.720834363546545*^9}, 3.720834448332694*^9, {
+   3.7208348191921453`*^9, 3.72083482203135*^9}, {3.7208349030266924`*^9, 
+   3.720834903447893*^9}, {3.7208361015591965`*^9, 3.7208361040552006`*^9}, {
+   3.720836352033236*^9, 3.72083637128367*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      InterpretationBox["\<\"    0.000000000\"\>",
+       0.,
+       AutoDelete->True], 
+      InterpretationBox["\<\"    0.000000000\"\>",
+       0.,
+       AutoDelete->True]},
+     {
+      InterpretationBox["\<\"    1.000000000\"\>",
+       1.,
+       AutoDelete->True], 
+      InterpretationBox["\<\"    1.581138830\"\>",
+       1.5811388300841898`,
+       AutoDelete->True]},
+     {
+      InterpretationBox["\<\"    2.000000000\"\>",
+       2.,
+       AutoDelete->True], 
+      InterpretationBox["\<\"    1.229547978\"\>",
+       1.2295479784040073`,
+       AutoDelete->True]},
+     {
+      InterpretationBox["\<\"    3.000000000\"\>",
+       3.,
+       AutoDelete->True], 
+      InterpretationBox["\<\"    1.426637992\"\>",
+       1.4266379916219365`,
+       AutoDelete->True]},
+     {
+      InterpretationBox["\<\"    4.000000000\"\>",
+       4.,
+       AutoDelete->True], 
+      InterpretationBox["\<\"    1.331950587\"\>",
+       1.33195058659261,
+       AutoDelete->True]},
+     {
+      InterpretationBox["\<\"    5.000000000\"\>",
+       5.,
+       AutoDelete->True], 
+      InterpretationBox["\<\"    1.381755824\"\>",
+       1.3817558244497368`,
+       AutoDelete->True]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[2.0999999999999996`]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   Function[BoxForm`e$, 
+    TableForm[BoxForm`e$]]],
+  PaddedForm[#, {13, 9}]& ]], "Output",
+ CellChangeTimes->{3.720835176415573*^9, 3.720836483011066*^9, 
+  3.7208368887413783`*^9}],
+
+Cell[BoxData["\<\"Maximum number of iteration exceeded\"\>"], "Print",
+ CellChangeTimes->{3.720836483026666*^9, 3.7208368887413783`*^9}]
+}, Open  ]],
+
+Cell["", "WolframAlphaShort",
+ CellChangeTimes->{3.720835216271633*^9}],
+
+Cell[BoxData["-"], "Input",
+ CellChangeTimes->{3.72083532251822*^9}]
+},
+WindowSize->{1366, 686},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 202, 3, 36, "Input"],
+Cell[CellGroupData[{
+Cell[785, 27, 3849, 113, 577, "Input"],
+Cell[4637, 142, 1837, 60, 133, "Output"],
+Cell[6477, 204, 136, 1, 28, "Print"]
+}, Open  ]],
+Cell[6628, 208, 71, 1, 41, "WolframAlphaShort"],
+Cell[6702, 211, 68, 1, 38, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

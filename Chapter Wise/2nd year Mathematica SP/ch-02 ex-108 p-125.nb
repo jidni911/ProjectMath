@@ -1,0 +1,109 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3017,         99]
+NotebookOptionsPosition[      2675,         82]
+NotebookOutlinePosition[      3046,         98]
+CellTagsIndexPosition[      3003,         95]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"L1", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"k", ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "1", ",", "100"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"L2", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"7", "*", "k"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "1", ",", 
+       RowBox[{"100", "/", "7"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"L3", "=", 
+   RowBox[{"Complement", "[", 
+    RowBox[{"L1", ",", "L2"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"L4", "=", 
+   RowBox[{"Partition", "[", 
+    RowBox[{"L3", ",", "7"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"TableForm", "[", 
+  RowBox[{"L4", ",", 
+   RowBox[{"TableAlignments", "\[Rule]", "Left"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.8423091968905373`*^9, 3.842309351845609*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"1", "2", "3", "4", "5", "6", "8"},
+    {"9", "10", "11", "12", "13", "15", "16"},
+    {"17", "18", "19", "20", "22", "23", "24"},
+    {"25", "26", "27", "29", "30", "31", "32"},
+    {"33", "34", "36", "37", "38", "39", "40"},
+    {"41", "43", "44", "45", "46", "47", "48"},
+    {"50", "51", "52", "53", "54", "55", "57"},
+    {"58", "59", "60", "61", "62", "64", "65"},
+    {"66", "67", "68", "69", "71", "72", "73"},
+    {"74", "75", "76", "78", "79", "80", "81"},
+    {"82", "83", "85", "86", "87", "88", "89"},
+    {"90", "92", "93", "94", "95", "96", "97"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$, TableAlignments -> Left]]]], "Output",
+ CellChangeTimes->{{3.842309335699581*^9, 3.8423093527660108`*^9}}]
+}, Open  ]]
+},
+WindowSize->{767, 586},
+WindowMargins->{{Automatic, 291}, {22, Automatic}},
+Magnification:>2. Inherited,
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 913, 28, 251, "Input"],
+Cell[1496, 52, 1163, 27, 419, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
